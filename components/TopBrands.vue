@@ -3,7 +3,6 @@
         <!-- top brands -->
         <h1 class="font-semibold text-4xl text-center mb-10">Top Brands</h1>
         <client-only> <!-- important to add no-ssr-->
-
             <carousel class="owl-border rounded-lg overflow-hidden" 
             :nav="false" 
             :dots="false" 
@@ -35,9 +34,8 @@
                     items: 5,
                     nav: false,
                     loop: true
-                }, 
-
-                }">
+            }, 
+        }">
             
                 <div class="border-r border-solid border-gray-300">
                     <a href="#" class="mx-auto">

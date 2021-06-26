@@ -82,8 +82,10 @@ export default {
 	methods: {
 		login() {
 			this.$auth.loginWith('laravelSanctum', {
-				email: 'l0978011552l@gmail.com',
-				passowrd: '127.0.0.1',
+				data: {
+					email: 'l0978011552l@gmail.com',
+					password: '127.0.0.1',
+				}
 			});
 		}
 	}
