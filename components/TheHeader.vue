@@ -1,11 +1,13 @@
 <template>
 <div>
     <!-- header mobile -->
-    <header class="w-full bg-petshop-orange lg:hidden">
+    <header class="w-full bg-red-600 lg:hidden">
         <div class="w-[94%] xl:w-11/12 mx-auto py-4 flex justify-between font-bold">
             <!--Navbar Menu Mobile-->
             <button class="toggle-open-menu focus:outline-none">
-                <i class="fas fa-bars text-white" style="font-size: 20px;"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" fill="white"/>
+                </svg>
             </button>
             <!--Navbar Menu Mobile Items-->
             <div class="toggle-menu-items fixed top-0 left-0 bg-white shadow-md w-60 h-full animate-OpenMenuMobile"
@@ -49,7 +51,9 @@
             <div class="flex items-center gap-2">
                 <i class="fas fa-stream"></i>
                 <div class="shopping-cart relative mr-2">
-                    <i class="bi bi-bag"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-bag" viewBox="0 0 16 16">
+                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                    </svg>
                     <!-- <i class="fas fa-shopping-bag text-white text-xl relative"></i> -->
                     <span
                         class="flex w-4 h-4 text-xs font-arial bg-white rounded-full items-center justify-center absolute -top-2 -right-2">0</span>
@@ -67,7 +71,6 @@
             </div>
         </div>
     </header>
-
     <!-- header desktop -->
     <header class="w-full hidden lg:block">
         <div class="w-[94%] xl:w-11/12 max-w-[1440px] mx-auto py-4">
@@ -116,7 +119,7 @@
                         </svg>
                         <!-- <i class="fas fa-shopping-bag"></i> -->
                         <span
-                            class="inline-block nav-color w-5 h-5 leading-5 absolute rounded-full font-sans text-xs text-white text-center -top-2 -right-3">
+                            class="inline-block bg-nav-color w-5 h-5 leading-5 absolute rounded-full font-sans text-xs text-white text-center -top-2 -right-3">
                             0
                         </span>
                     </div>
@@ -125,17 +128,23 @@
             <div class="flex items-center justify-between bg-nav-color rounded-full py-3">
                 <!-- nav menu-->
                 <nav class="flex-grow px-8">
-                    <ul class="flex gap-4 xl:gap-8 items-center text-lg text-white relative">
+                    <ul class="flex gap-4 xl:gap-6 items-center text-lg text-white relative">
                         <li>
                             <a href="#" class="font-semibold">
                                 Trang chủ
-                                <i class="fa fa-angle-down text-sm"></i>
+                             <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="white"/>
+                             </svg>
                             </a>
                         </li>
                         <li class="group">
                             <a href="#" class="font-semibold">
                                 Shop
-                                <i class="fa fa-angle-down text-sm"></i>
+                             <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="white"/>
+                             </svg>
                             </a>
                             <!--Start Dropdown-menu-->
                             <div class="grid grid-cols-4 gap-2 w-full p-6 absolute top-full left-0 bg-white shadow-md 
@@ -307,7 +316,10 @@
                         <li class="group">
                             <a href="#" class="font-semibold">
                                 Product
-                                <i class="fa fa-angle-down text-sm"></i>
+                             <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="white"/>
+                             </svg>
                             </a>
                             <!--Dropdown Menu-->
                             <div class="grid grid-cols-4 gap-2 w-full p-6 absolute top-full left-0 bg-white shadow-md 
@@ -478,7 +490,10 @@
                         <li class="group">
                             <a href="#" class="font-semibold">
                                 Blog
-                                <i class="fa fa-angle-down text-sm"></i>
+                             <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="white"/>
+                             </svg>
                             </a>
                             <!--Dropdown Menu-->
                             <div class="grid grid-cols-3 gap-2 w-full p-6 absolute top-full left-0 bg-white shadow-md 
@@ -643,7 +658,10 @@
                         <li class="relative group">
                             <a href="#" class="font-semibold">
                                 Liên hệ
-                                <i class="fa fa-angle-down text-sm"></i>
+                             <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="white"/>
+                             </svg>
                             </a>
                             <!--Dropdown Menu-->
                             <div class="w-max absolute top-full left-0 bg-white shadow-md 
@@ -680,3 +698,44 @@ export default {
 
 }
 </script>
+
+<style scoped>
+.shop-categories-title h2::before {
+    border-right: 8px solid #F59E0B;
+    content: "";
+    position: absolute;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    left: 0;
+    bottom: -8px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+
+.submenu::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    width: 100%;
+    height: 15px;
+} 
+.submenu-title:before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 1px;
+    background: red;
+    bottom: 0;
+    left:0;
+
+}
+.bg-nav-color {
+    background-color: #ed6436 !important;
+}
+</style>
