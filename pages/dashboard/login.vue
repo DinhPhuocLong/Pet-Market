@@ -84,7 +84,11 @@ export default {
 			this.$auth.loginWith('laravelSanctum', {
 				data: {
 					email: 'l0978011552l@gmail.com',
+<<<<<<< Updated upstream
 					password: '127.0.0.1',
+=======
+					password: '127.0.0.1'
+>>>>>>> Stashed changes
 				}
 			});
 		}

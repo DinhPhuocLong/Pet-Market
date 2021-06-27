@@ -43,6 +43,9 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
   ],
+  axios: {
+    credentials: true   // Attention, credentials not withCredentials
+  },
   auth: {
     strategies: {
       'laravelSanctum': {
@@ -51,7 +54,7 @@ export default {
         endpoints: {
           login: {
             url: '/api/login',
-          }
+          },
         }
       }
     }
