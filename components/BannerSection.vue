@@ -1,100 +1,6 @@
 <template>
     <!-- banner section -->
     <div class="w-[94%] xl:w-11/12 max-w-[1440px] mx-auto mt-2">
-        <!-- <div class="hidden lg:block w-60 border border-solid border-gray-300 rounded-lg float-left mr-2">
-            <ul class="text-lg font-bold">
-                <li class="border-b border-solid border-gray-300">
-                    <a href="#" class="block py-1.5 xl:py-3 px-4">
-                        <div class="flex items-center justify-items-center">
-                            <div class="w-8 mr-4">
-                                <img class="mx-auto"
-                                src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/icon-dog.png"
-                                width="31" height="31" alt="">
-                            </div>
-                            <span>Dog</span>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="border-b border-solid border-gray-300">
-                    <a href="#" class="block py-1.5 xl:py-3 px-4">
-                        <div class="flex items-center justify-items-center">
-                            <div class="w-8 mr-4">
-                                <img class="mx-auto"
-                                src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/icon-cat.png"
-                                width="31" height="31" alt="">
-                            </div>
-                            <span>Cat</span>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="border-b border-solid border-gray-300">
-                    <a href="#" class="block py-1.5 xl:py-3 px-4">
-                        <div class="flex items-center justify-items-center">
-                            <div class="w-8 mr-4">
-                                <img class="mx-auto"
-                                src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/icon-fish.png"
-                                width="31" height="31" alt="">
-                            </div>
-                            <span>Fish</span>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="border-b border-solid border-gray-300">
-                    <a href="#" class="block py-1.5 xl:py-3 px-4">
-                        <div class="flex items-center justify-items-center">
-                            <div class="w-8 mr-4">
-                                <img class="mx-auto"
-                                src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/icon-chicken.png"
-                                width="21" height="31" alt="">
-                            </div>
-                            <span>Chicken</span>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="border-b border-solid border-gray-300">
-                    <a href="#" class="block py-1.5 xl:py-3 px-4">
-                        <div class="flex items-center justify-items-center">
-                            <div class="w-8 mr-4">
-                                <img class="mx-auto"
-                                src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/icon-horse.png"
-                                width="31" height="31" alt="">
-                            </div>
-                            <span>Horse</span>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="border-b border-solid border-gray-300">
-                    <a href="#" class="block py-1.5 xl:py-3 px-4">
-                        <div class="flex items-center justify-items-center">
-                            <div class="w-8 mr-4">
-                                <img class="mx-auto"
-                                src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/icon-chicken.png"
-                                width="21" height="31" alt="">
-                            </div>
-                            <span>Chicken</span>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="border-b border-solid border-gray-300">
-                    <a href="#" class="block py-1.5 xl:py-3 px-4">
-                        <div class="flex items-center justify-items-center">
-                            <div class="w-8 mr-4">
-                                <img class="mx-auto"
-                                src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/icon-reptile.png"
-                                width="31" height="31" alt="">
-                            </div>
-                            <span>Reptile</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div> -->
         <client-only>
             <carousel id="banner-carousel" class="owl-border rounded-lg overflow-hidden relative" 
                 :nav="false" 
@@ -105,6 +11,40 @@
                 :autoplayTimeout="5000"
             >
                 <div id="" class="w-full h-[250px] ip6:h-[293px] md:h-[480px] lg:h-[580px] rounded-lg overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/Slider-4.jpg" height="590"
+                        alt="">
+                    <div class="absolute px-4 top-20 left-3 md:top-40 md:right-1/2 lg:text-center">
+                        <p class="uppercase text-[8px] md:text-[14px] font-normal text-gray-700">Everything your pet need
+                        </p>
+                        <p class="font-bold text-[24px] md:text-[52px] text-yellow-800 leading-6 md:leading-none">Health &
+                            <br /> Wellness Services
+                        </p>
+                        <button
+                            class="my-2 text-[16px] font-bold py-2 px-8 bg-yellow-800 text-white hover:bg-red-500 rounded-full">
+                            shop now
+                        </button>
+                    </div>
+                </div>
+
+                  <div id="" class="w-full h-[250px] ip6:h-[293px] md:h-[480px] lg:h-[580px] rounded-lg overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/Slider-4.jpg" height="590"
+                        alt="">
+                    <div class="absolute px-4 top-20 left-3 md:top-40 md:right-1/2 lg:text-center">
+                        <p class="uppercase text-[8px] md:text-[14px] font-normal text-gray-700">Everything your pet need
+                        </p>
+                        <p class="font-bold text-[24px] md:text-[52px] text-yellow-800 leading-6 md:leading-none">Health &
+                            <br /> Wellness Services
+                        </p>
+                        <button
+                            class="my-2 text-[16px] font-bold py-2 px-8 bg-yellow-800 text-white hover:bg-red-500 rounded-full">
+                            shop now
+                        </button>
+                    </div>
+                </div>
+
+                  <div id="" class="w-full h-[250px] ip6:h-[293px] md:h-[480px] lg:h-[580px] rounded-lg overflow-hidden">
                     <img class="w-full h-full object-cover"
                         src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/Slider-4.jpg" height="590"
                         alt="">
@@ -181,35 +121,6 @@ export default {
 </script>
 
 <style scoped>
-.owl-stage-outer::after {
-        width: 1px;
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        background-color: white;
-    }
-
-    .owl-next,
-    .owl-prev {
-        opacity: 0 !important;
-    }
-
-    .owl-carousel:hover .owl-prev {
-        opacity: 1 !important;
-        opacity: 1 !important;
-        transition: all 0.5s;
-        -webkit-transition: all 0.5s;
-    }
-
-    .owl-carousel:hover .owl-next {
-        opacity: 1 !important;
-        opacity: 1 !important;
-        transition: all 0.5s;
-        -webkit-transition: all 0.5s;
-    }
-
     .owl-dots {
         position: absolute;
         bottom: 30px;

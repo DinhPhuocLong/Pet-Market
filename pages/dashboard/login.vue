@@ -13,7 +13,7 @@
 					<!-- Col -->
 					<div class="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
 						<h3 class="pt-4 text-2xl text-center">Welcome Back!</h3>
-						<form class="px-8 pt-6 pb-8 mb-4 bg-white rounded">
+						<form class="px-8 pt-6 pb-8 mb-4 bg-white rounded" @keyup.enter="login()">
 							<div class="mb-4">
 								<label class="block mb-2 text-sm font-bold text-gray-700" for="username">
 									Username
@@ -23,6 +23,7 @@
 									id="username"
 									type="text"
 									placeholder="Username"
+									v-model="credentials.email"
 								/>
 							</div>
 							<div class="mb-4">
@@ -34,6 +35,7 @@
 									id="password"
 									type="password"
 									placeholder="******************"
+									v-model="credentials.password"
 								/>
 								<p class="text-xs italic text-red-500">Please choose a password.</p>
 							</div>
@@ -44,7 +46,9 @@
 								</label>
 							</div>
 							<div class="mb-6 text-center">
-								<button @click.prevent="login()"
+								<button
+									@click="login();" 
+									@keyup.enter="login();"
 									class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
 									type="button"
 								>
@@ -79,18 +83,24 @@
 <script>
 export default {
     layout: 'login',
+	data() {
+		return {
+			credentials: {
+				email: '',
+				password: '',
+			}
+		}
+	},
 	methods: {
-		login() {
-			this.$auth.loginWith('laravelSanctum', {
-				data: {
-					email: 'l0978011552l@gmail.com',
-<<<<<<< Updated upstream
-					password: '127.0.0.1',
-=======
-					password: '127.0.0.1'
->>>>>>> Stashed changes
-				}
-			});
+		async login() {
+			try {
+				let response = await this.$auth.loginWith('laravelJWT', {
+					data: this.credentials
+				})
+				this.$router.push({ name: 'dashboard' });
+			} catch (error) {
+				console.log('Địt mẹ cuộc đời');
+			}
 		}
 	}
 }

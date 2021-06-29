@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'petshopv1',
+    title: 'Pet-Market',
     htmlAttrs: {
       lang: 'en'
     },
@@ -47,17 +47,30 @@ export default {
     credentials: true   // Attention, credentials not withCredentials
   },
   auth: {
+    redirect: false,
     strategies: {
-      'laravelSanctum': {
-        provider: 'laravel/sanctum',
+      'laravelJWT': {
+        provider: 'laravel/jwt',
         url: 'http://localhost:8000',
+        token: {
+          property: 'meta.token',
+          required: true,
+          type: 'Bearer'
+        },
+        user: {
+          property: false, // <--- Default "user"
+          autoFetch: true
+        },
         endpoints: {
           login: {
             url: '/api/login',
           },
-        }
+          user: {
+            url: '/api/user',
+          }
+        },
       }
-    }
+    },
   },
   
 
