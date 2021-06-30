@@ -1,4 +1,5 @@
 <template>
+	<client-only>
     <div class="font-mono bg-gray-400 h-screen">
 		<!-- Container -->
 		<div class="container mx-auto">
@@ -78,6 +79,7 @@
 			</div>
 		</div>
 	</div>
+	</client-only>
 </template>
 
 <script>
