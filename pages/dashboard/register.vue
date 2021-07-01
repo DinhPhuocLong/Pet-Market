@@ -26,6 +26,7 @@
 									placeholder="Email"
                                     v-model="registerCredentials.email"
 								/>
+								<p class="text-xs italic text-red-500">Vui lòng nhập Email.</p>
 							</div>
 
                             <div class="mb-4">
@@ -39,6 +40,7 @@
 									placeholder="Ho va ten"
                                     v-model="registerCredentials.name"
 								/>
+								<p class="text-xs italic text-red-500">Vui lòng nhập đầy đủ họ và tên.</p>
 							</div>
 
                             <div class="mb-4">
@@ -52,6 +54,7 @@
 									placeholder="Ten tai khoan"
                                     v-model="registerCredentials.username"
 								/>
+								<p class="text-xs italic text-red-500">Vui lòng nhập tên đăng nhập tài khoản.</p>
 							</div>
 
 							<div class="mb-4">
