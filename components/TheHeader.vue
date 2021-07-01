@@ -656,13 +656,13 @@
                             </div>
                         </li>
                         <li class="relative group">
-                            <a href="#" class="font-semibold">
+                            <nuxt-link to="/lien-he" class="font-semibold">
                                 Liên hệ
                              <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                 <path fill="none" d="M0 0h24v24H0z"/>
                                 <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="white"/>
                              </svg>
-                            </a>
+                            </nuxt-link>
                             <!--Dropdown Menu-->
                             <div class="w-max absolute top-full left-0 bg-white shadow-md 
                             mt-14 opacity-0 invisible group-hover:mt-4 group-hover:opacity-100 group-hover:visible transition-all duration-500"
