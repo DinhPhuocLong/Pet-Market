@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -47,16 +47,8 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
+    '@nuxtjs/dotenv',
   ],
-
-
-  publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL
-  },
-
-  privateRuntimeConfig: {
-    apiSecret: process.env.API_SECRET
-  },
 
   axios: {
     credentials: true   // Attention, credentials not withCredentials
