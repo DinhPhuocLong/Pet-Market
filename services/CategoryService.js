@@ -1,11 +1,11 @@
-const resource = process.env.BASE_URL;
+const resource = process.env.BASE_URL + '/danh-muc';
 export default ($axios) => ({
     all() {
         console.log(process.env.BASE_URL);
-        return $axios.get(`${resource}/danh-muc`);
+        return $axios.get(resource);
     },
     store(payload) {
-        return $axios.post(`${resource}/danh-muc`, payload);
+        return $axios.post(resource, payload);
     }
     
 });
