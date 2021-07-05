@@ -1,3 +1,4 @@
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -21,12 +22,16 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    {src:'element-ui/lib/theme-chalk/index.css'} // 1. Configure the css location of element-ui in css
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     'plugins/services.js',
-    {src: 'plugins/owl.js', ssr: false} // Only works on client side
+    'plugins/vee-validate.js',
+    'plugins/filters.js',
+    {src:'plugins/element-ui', ssr: false},
+    {src: 'plugins/owl.js', ssr: false}, // Only works on client side
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,6 +48,16 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
   ],
+
+
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL || 'http://localhost:8000'
+  },
+
+  privateRuntimeConfig: {
+    apiSecret: process.env.API_SECRET
+  },
+
   axios: {
     credentials: true   // Attention, credentials not withCredentials
   },
@@ -51,9 +66,9 @@ export default {
     strategies: {
       'laravelJWT': {
         provider: 'laravel/jwt',
-        url: 'http://localhost:8000',
+        url: process.env.BASE_URL,
         token: {
-          property: 'meta.token',
+          property: 'token',
           required: true,
           type: 'Bearer'
         },
@@ -63,10 +78,14 @@ export default {
         },
         endpoints: {
           login: {
-            url: '/api/login',
+            url: '/login',
           },
           user: {
-            url: '/api/user',
+            url: '/user',
+            method: 'get',
+          },
+          logout: {
+            url: '/logout'
           }
         },
       }
@@ -76,5 +95,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: ['vee-validate'],
+    Vendor: ['element-ui'],
   }
 }

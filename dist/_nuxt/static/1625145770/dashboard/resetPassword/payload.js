@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/dashboard/resetPassword", {data:[{}],fetch:{},mutations:[]});

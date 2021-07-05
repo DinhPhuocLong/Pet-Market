@@ -1,4 +1,4 @@
-const resource = 'http://localhost:8000/api';
+const resource = process.env.BASE_URL;
 export default ($axios) => ({
     login(payload) {
         return $axios.post(`${resource}/login`, payload);

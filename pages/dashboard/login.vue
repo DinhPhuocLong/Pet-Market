@@ -13,47 +13,58 @@
 					></div>
 					<!-- Col -->
 					<div class="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
-						<h3 class="pt-4 text-2xl text-center">Welcome Back!</h3>
-						<form class="px-8 pt-6 pb-8 mb-4 bg-white rounded" @keyup.enter="login()">
+						<h3 class="pt-4 text-2xl text-center">Đăng nhập</h3>
+						<ValidationObserver ref="form">
+						<form 
+						@submit.prevent="onSubmit();" 
+						@keyup.enter="onSubmit();"
+						class="px-8 pt-6 pb-8 mb-4 bg-white rounded">
 							<div class="mb-4">
 								<label class="block mb-2 text-sm font-bold text-gray-700" for="username">
-									Username
+									Email
 								</label>
+								<ValidationProvider rules="required|isValidateEmail" :custom-messages="customErrorMessages.email" v-slot="{ errors }">
 								<input
-									class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-									id="username"
+								id="field"
+									name="field"
+									class="w-full px-3 py-2  mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
 									type="text"
-									placeholder="Username"
+									placeholder="Email"
 									v-model="credentials.email"
+									:class="{ 'border-red-600': errors[0] }"
 								/>
+								<p class="text-xs italic text-red-500">{{ errors[0] }}</p>
+								</ValidationProvider>
 							</div>
 							<div class="mb-4">
 								<label class="block mb-2 text-sm font-bold text-gray-700" for="password">
-									Password
+									Mật khẩu
 								</label>
+								<ValidationProvider rules="required" :custom-messages="customErrorMessages.password" v-slot="{ errors }">
 								<input
-									class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+									name="email"
+									class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
 									id="password"
 									type="password"
 									placeholder="******************"
 									v-model="credentials.password"
+									:class="{ 'border-red-600': errors[0] }"
 								/>
-								<p class="text-xs italic text-red-500">Please choose a password.</p>
+								<p class="text-xs italic text-red-500">{{ errors[0] }}</p>
+								</ValidationProvider>
 							</div>
 							<div class="mb-4">
 								<input class="mr-2 leading-tight" type="checkbox" id="checkbox_id" />
 								<label class="text-sm" for="checkbox_id">
-									Remember Me
+									Lưu đăng nhập
 								</label>
 							</div>
 							<div class="mb-6 text-center">
 								<button
-									@click="login();" 
-									@keyup.enter="login();"
 									class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-									type="button"
+									type="submit"
 								>
-									Sign In
+									Đăng nhập
 								</button>
 							</div>
 							<hr class="mb-6 border-t" />
@@ -62,7 +73,7 @@
 									class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
 									href="./register.html"
 								>
-									Create an Account!
+									Tạo tài khoản!
 								</a>
 							</div>
 							<div class="text-center">
@@ -70,10 +81,11 @@
 									class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
 									href="./forgot-password.html"
 								>
-									Forgot Password?
+									Quên mật khẩu?
 								</a>
 							</div>
 						</form>
+						</ValidationObserver>
 					</div>
 				</div>
 			</div>
@@ -83,28 +95,67 @@
 </template>
 
 <script>
+import { ValidationProvider, ValidationObserver } from "vee-validate";
+import { Message } from 'element-ui'
 export default {
     layout: 'login',
+	middleware: 'unauthenticated',
+	components: {
+		ValidationProvider,
+		ValidationObserver
+	},
 	data() {
 		return {
 			credentials: {
-				email: '',
-				password: '',
+				email: 'l0978011552l@gmail.com',
+				password: '127.0.0.1',
+			},
+			customErrorMessages: {
+				email: {required: 'Hãy nhập email của bạn!'},
+				password: {required: 'Hãy nhập mật khẩu của bạn!'},
 			}
 		}
 	},
 	methods: {
+
+		//TODO: Test case 1 => catching form error before can send login request to server
 		async login() {
 			try {
-				let response = await this.$auth.loginWith('laravelJWT', {
+				await this.$auth.loginWith('laravelJWT', {
 					data: this.credentials
-				})
-				this.$router.push({ name: 'dashboard' });
+				});
+				Message({
+					message: 'Đăng nhập thành công',
+					type: 'success'
+				});
+			
+				setTimeout(_=> {
+					this.$router.push({
+						name: "dashboard",
+					});
+				}, 2000); //MS
 			} catch (error) {
-				console.log('Địt mẹ cuộc đời');
+				Message({
+					message: error.response.data.error,
+					type: 'error'
+				});
 			}
+		},
+
+		// form validate
+		onSubmit() {
+			this.$refs.form.validate().then(success => {
+				if (!success) {
+					return;
+				} else {
+					this.login();
+				}
+			});
 		}
-	}
+	},
+	beforeDestroy() {
+		Message.closeAll()
+	},
 }
 </script>
 

@@ -1,11 +1,11 @@
 <template>
     <client-only>
-	 <div class="font-mono bg-gray-400 h-screen">
+	<div class="font-mono bg-gray-400 h-screen">
 		<!-- Container -->
 		<div class="container mx-auto">
 			<div class="flex justify-center px-6">
 				<!-- Row -->
-				<div class="w-full xl:w-3/4 lg:w-11/12 flex mt-32">
+				<div class="w-full xl:w-3/4 lg:w-11/12 flex mt-10">
 					<!-- Col -->
 					<div
 						class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg"
@@ -26,7 +26,7 @@
 									placeholder="Email"
                                     v-model="registerCredentials.email"
 								/>
-								<p class="text-xs italic text-red-500 mt-3">Vui lòng nhập Email.</p>
+								<p class="text-xs italic text-red-500">Vui lòng nhập Email.</p>
 							</div>
 
                             <div class="mb-4">
@@ -40,7 +40,7 @@
 									placeholder="Ho va ten"
                                     v-model="registerCredentials.name"
 								/>
-								<p class="text-xs italic text-red-500 mt-3">Vui lòng nhập đầy đủ họ và tên.</p>
+								<p class="text-xs italic text-red-500">Vui lòng nhập đầy đủ họ và tên.</p>
 							</div>
 
                             <div class="mb-4">
@@ -54,7 +54,7 @@
 									placeholder="Ten tai khoan"
                                     v-model="registerCredentials.username"
 								/>
-								<p class="text-xs italic text-red-500 mt-3">Vui lòng nhập tên đăng nhập tài khoản.</p>
+								<p class="text-xs italic text-red-500">Vui lòng nhập tên đăng nhập tài khoản.</p>
 							</div>
 
 							<div class="mb-4">

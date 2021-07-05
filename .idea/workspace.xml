@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="00aaec82-748f-493a-b060-b87f115440f2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/dashboard/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/dashboard/NavBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/dashboard/category/FormAdd.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/dashboard/category/FormAdd.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/authenticated.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/authenticated.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dashboard/category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard/category.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dashboard/forgotPassword.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dashboard/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dashboard/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard/register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/lien-he/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/AuthService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/AuthService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/CategoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/CategoryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/ContactService.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/ContactService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1uqYn5KEuh0qOs690EDeV9h6aKn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00aaec82-748f-493a-b060-b87f115440f2" name="Default Changelist" comment="" />
+      <created>1625394753261</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625394753261</updated>
+      <workItem from="1625394756329" duration="4000" />
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,41 @@
+{
+  "BannerSection": {
+    "description": "Auto imported from components/BannerSection.vue"
+  },
+  "BannerSection2": {
+    "description": "Auto imported from components/BannerSection2.vue"
+  },
+  "BannerSection3": {
+    "description": "Auto imported from components/BannerSection3.vue"
+  },
+  "BestDeal": {
+    "description": "Auto imported from components/BestDeal.vue"
+  },
+  "BlogsSection": {
+    "description": "Auto imported from components/BlogsSection.vue"
+  },
+  "Categories": {
+    "description": "Auto imported from components/Categories.vue"
+  },
+  "TheFooter": {
+    "description": "Auto imported from components/TheFooter.vue"
+  },
+  "TheHeader": {
+    "description": "Auto imported from components/TheHeader.vue"
+  },
+  "TopBrands": {
+    "description": "Auto imported from components/TopBrands.vue"
+  },
+  "TrendingProducts": {
+    "description": "Auto imported from components/TrendingProducts.vue"
+  },
+  "DashboardNavBar": {
+    "description": "Auto imported from components/dashboard/NavBar.vue"
+  },
+  "DashboardSideBar": {
+    "description": "Auto imported from components/dashboard/SideBar.vue"
+  },
+  "DashboardCategoryFormAdd": {
+    "description": "Auto imported from components/dashboard/category/FormAdd.vue"
+  }
+}
