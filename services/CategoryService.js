@@ -1,4 +1,4 @@
-const resource = process.env.BASE_URL + '/danh-muc';
+const resource = process.env.BASE_URL + '/category';
 export default ($axios) => ({
     all() {
         console.log(process.env.BASE_URL);
