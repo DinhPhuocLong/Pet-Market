@@ -4,12 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _db6efcb8 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
-const _eadf732c = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
-const _57ddc6d4 = () => interopDefault(import('..\\pages\\dashboard\\category.vue' /* webpackChunkName: "pages/dashboard/category" */))
-const _5437e981 = () => interopDefault(import('..\\pages\\dashboard\\login.vue' /* webpackChunkName: "pages/dashboard/login" */))
-const _54df33bb = () => interopDefault(import('..\\pages\\dashboard\\register.vue' /* webpackChunkName: "pages/dashboard/register" */))
-const _3e80a856 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _252729f0 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
+const _4b72ad86 = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
+const _0263e00c = () => interopDefault(import('..\\pages\\dashboard\\category.vue' /* webpackChunkName: "pages/dashboard/category" */))
+const _151a509d = () => interopDefault(import('..\\pages\\dashboard\\login.vue' /* webpackChunkName: "pages/dashboard/login" */))
+const _7f9c271f = () => interopDefault(import('..\\pages\\dashboard\\register.vue' /* webpackChunkName: "pages/dashboard/register" */))
+const _f8d0ca8c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -24,27 +24,27 @@ export const routerOptions = {
 
   routes: [{
     path: "/contact",
-    component: _db6efcb8,
+    component: _252729f0,
     name: "contact"
   }, {
     path: "/dashboard",
-    component: _eadf732c,
+    component: _4b72ad86,
     name: "dashboard"
   }, {
     path: "/dashboard/category",
-    component: _57ddc6d4,
+    component: _0263e00c,
     name: "dashboard-category"
   }, {
     path: "/dashboard/login",
-    component: _5437e981,
+    component: _151a509d,
     name: "dashboard-login"
   }, {
     path: "/dashboard/register",
-    component: _54df33bb,
+    component: _7f9c271f,
     name: "dashboard-register"
   }, {
     path: "/",
-    component: _3e80a856,
+    component: _f8d0ca8c,
     name: "index"
   }],
 

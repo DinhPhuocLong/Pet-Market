@@ -19,3 +19,4 @@ You can directly use them in pages and other components without the need to impo
 - `<DashboardNavBar>` | `<dashboard-nav-bar>` (components/dashboard/NavBar.vue)
 - `<DashboardSideBar>` | `<dashboard-side-bar>` (components/dashboard/SideBar.vue)
 - `<DashboardCategoryFormAdd>` | `<dashboard-category-form-add>` (components/dashboard/category/FormAdd.vue)
+- `<DashboardCategoryFormUpdate>` | `<dashboard-category-form-update>` (components/dashboard/category/_FormUpdate.vue)
