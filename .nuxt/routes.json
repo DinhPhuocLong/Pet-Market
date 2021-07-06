@@ -2,43 +2,43 @@
   {
     "name": "contact",
     "path": "/contact",
-    "component": "C:\\\\Users\\\\dinhp\\\\Desktop\\\\Pet-Market\\\\pages\\\\contact.vue",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\contact.vue",
     "chunkName": "pages/contact",
-    "_name": "_db6efcb8"
+    "_name": "_252729f0"
   },
   {
     "name": "dashboard",
     "path": "/dashboard",
-    "component": "C:\\\\Users\\\\dinhp\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\index.vue",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\index.vue",
     "chunkName": "pages/dashboard/index",
-    "_name": "_eadf732c"
+    "_name": "_4b72ad86"
   },
   {
     "name": "dashboard-category",
     "path": "/dashboard/category",
-    "component": "C:\\\\Users\\\\dinhp\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\category.vue",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\category.vue",
     "chunkName": "pages/dashboard/category",
-    "_name": "_57ddc6d4"
+    "_name": "_0263e00c"
   },
   {
     "name": "dashboard-login",
     "path": "/dashboard/login",
-    "component": "C:\\\\Users\\\\dinhp\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\login.vue",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\login.vue",
     "chunkName": "pages/dashboard/login",
-    "_name": "_5437e981"
+    "_name": "_151a509d"
   },
   {
     "name": "dashboard-register",
     "path": "/dashboard/register",
-    "component": "C:\\\\Users\\\\dinhp\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\register.vue",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\register.vue",
     "chunkName": "pages/dashboard/register",
-    "_name": "_54df33bb"
+    "_name": "_7f9c271f"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\dinhp\\\\Desktop\\\\Pet-Market\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_3e80a856"
+    "_name": "_f8d0ca8c"
   }
 ]

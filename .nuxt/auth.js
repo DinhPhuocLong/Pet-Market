@@ -37,7 +37,7 @@ export default function (ctx, inject) {
   // Register strategies
   // laravelJWT
   $auth.registerStrategy('laravelJWT', new LaravelJWTScheme($auth, {
-  "url": "http://localhost:8000/api",
+  "url": "http://petshop.ml/api",
   "token": {
     "property": "token",
     "maxAge": 3600,
@@ -50,16 +50,16 @@ export default function (ctx, inject) {
   },
   "endpoints": {
     "login": {
-      "url": "http://localhost:8000/api/login"
+      "url": "http://petshop.ml/api/login"
     },
     "refresh": {
-      "url": "http://localhost:8000/api/api/auth/refresh"
+      "url": "http://petshop.ml/api/api/auth/refresh"
     },
     "logout": {
-      "url": "http://localhost:8000/api/logout"
+      "url": "http://petshop.ml/api/logout"
     },
     "user": {
-      "url": "http://localhost:8000/api/user",
+      "url": "http://petshop.ml/api/user",
       "method": "get"
     }
   },

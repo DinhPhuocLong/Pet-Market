@@ -14,7 +14,8 @@ const components = {
   TrendingProducts: () => import('../..\\components\\TrendingProducts.vue' /* webpackChunkName: "components/trending-products" */).then(c => wrapFunctional(c.default || c)),
   DashboardNavBar: () => import('../..\\components\\dashboard\\NavBar.vue' /* webpackChunkName: "components/dashboard-nav-bar" */).then(c => wrapFunctional(c.default || c)),
   DashboardSideBar: () => import('../..\\components\\dashboard\\SideBar.vue' /* webpackChunkName: "components/dashboard-side-bar" */).then(c => wrapFunctional(c.default || c)),
-  DashboardCategoryFormAdd: () => import('../..\\components\\dashboard\\category\\FormAdd.vue' /* webpackChunkName: "components/dashboard-category-form-add" */).then(c => wrapFunctional(c.default || c))
+  DashboardCategoryFormAdd: () => import('../..\\components\\dashboard\\category\\FormAdd.vue' /* webpackChunkName: "components/dashboard-category-form-add" */).then(c => wrapFunctional(c.default || c)),
+  DashboardCategoryFormUpdate: () => import('../..\\components\\dashboard\\category\\_FormUpdate.vue' /* webpackChunkName: "components/dashboard-category-form-update" */).then(c => wrapFunctional(c.default || c))
 }
 
 for (const name in components) {

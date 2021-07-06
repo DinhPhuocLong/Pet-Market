@@ -125,6 +125,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="flex items-center justify-between bg-nav-color rounded-full py-3">
                 <!-- nav menu-->
                 <nav class="flex-grow px-8">

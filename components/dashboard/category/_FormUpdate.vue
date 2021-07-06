@@ -1,6 +1,6 @@
 <template>
     <div class="font-nunito">
-        <h1 class="text-3xl font-bold">Danh mục sản phẩm</h1>
+        <h1 class="text-3xl font-bold">Chỉnh sửa danh mục</h1>
         <div class="w-full flex mt-10">
             <div class="w-1/4">
                 <h2 class="text-lg font-semibold">Thêm danh mục</h2>
