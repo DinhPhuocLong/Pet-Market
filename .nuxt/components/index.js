@@ -13,7 +13,6 @@ export { default as TrendingProducts } from '../..\\components\\TrendingProducts
 export { default as DashboardNavBar } from '../..\\components\\dashboard\\NavBar.vue'
 export { default as DashboardSideBar } from '../..\\components\\dashboard\\SideBar.vue'
 export { default as DashboardCategoryFormAdd } from '../..\\components\\dashboard\\category\\FormAdd.vue'
-export { default as DashboardCategoryFormUpdate } from '../..\\components\\dashboard\\category\\_FormUpdate.vue'
 
 export const LazyBannerSection = import('../..\\components\\BannerSection.vue' /* webpackChunkName: "components/banner-section" */).then(c => wrapFunctional(c.default || c))
 export const LazyBannerSection2 = import('../..\\components\\BannerSection2.vue' /* webpackChunkName: "components/banner-section2" */).then(c => wrapFunctional(c.default || c))
@@ -28,4 +27,3 @@ export const LazyTrendingProducts = import('../..\\components\\TrendingProducts.
 export const LazyDashboardNavBar = import('../..\\components\\dashboard\\NavBar.vue' /* webpackChunkName: "components/dashboard-nav-bar" */).then(c => wrapFunctional(c.default || c))
 export const LazyDashboardSideBar = import('../..\\components\\dashboard\\SideBar.vue' /* webpackChunkName: "components/dashboard-side-bar" */).then(c => wrapFunctional(c.default || c))
 export const LazyDashboardCategoryFormAdd = import('../..\\components\\dashboard\\category\\FormAdd.vue' /* webpackChunkName: "components/dashboard-category-form-add" */).then(c => wrapFunctional(c.default || c))
-export const LazyDashboardCategoryFormUpdate = import('../..\\components\\dashboard\\category\\_FormUpdate.vue' /* webpackChunkName: "components/dashboard-category-form-update" */).then(c => wrapFunctional(c.default || c))

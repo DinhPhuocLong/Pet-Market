@@ -107,6 +107,11 @@
                                 </th>
                                 <th
                                     class="bg-white px-5 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    Người tạo
+                                </th>
+
+                                <th
+                                    class="bg-white px-5 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                     Tình trạng
                                 </th>
 
@@ -122,49 +127,57 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="even:bg-white relative group" v-for="option in selectOptions" :key="option.id">
+                            <tr class="even:bg-white relative group" v-for="cate in tableCategoryData" :key="cate.id">
                                 <td class="px-5 py-5 border-b border-gray-200 text-sm">
                                     <p class="text-gray-900 whitespace-no-wrap">
-                                        {{ option.name }}
+                                        {{ cate.name }}
                                     </p>
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 text-sm">
-                                    <p class="text-gray-900 whitespace-no-wrap">{{ option.keywords }}</p>
+                                    <p class="text-gray-900 whitespace-no-wrap">{{ cate.keywords }}</p>
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 text-sm">
                                     <p class="text-gray-900 whitespace-no-wrap">
-                                        {{ option.slug }}
+                                        {{ cate.slug }}
                                     </p>
                                 </td>
+
+                                <td class="px-5 py-5 border-b border-gray-200 text-sm">
+                                    <p class="text-gray-900 whitespace-no-wrap">
+                                        {{ cate.user }}
+                                    </p>
+                                </td>
+
+
                                 <td class="px-5 py-5 border-b border-gray-200 text-sm">
                                     <span
                                         class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
                                         <span aria-hidden class="absolute inset-0 opacity-50 rounded-full"
-                                            v-bind:class="[!option.hidden ? 'bg-green-300' : 'bg-red-300']"></span>
-                                        <span class="relative">{{ status(option.hidden) }}</span>
+                                            v-bind:class="[!cate.hidden ? 'bg-green-300' : 'bg-red-300']"></span>
+                                        <span class="relative">{{ status(cate.hidden) }}</span>
                                     </span>
                                 </td>
+
+
+
+
                                 <td class="px-5 py-5 border-b border-gray-200 text-sm">
                                     <p class="text-gray-900 whitespace-no-wrap">
-                                        {{ option.created_at | formatDate}}
+                                        {{ cate.created_at | formatDate}}
                                     </p>
                                 </td>
                                 <td class="px-5 py-5 border-b border-gray-200 text-sm">
                                     <p class="text-gray-900 whitespace-no-wrap">
-                                        {{ option.updated_at | formatDate}}
+                                        {{ cate.updated_at | formatDate}}
                                     </p>
                                 </td>
                                 <div class="w-full text-black text-[12px] absolute px-5 top-7 left-0 mt-14 
                                 group-hover:mt-4 group-hover:opacity-100 group-hover:visible transition-all duration-500">
-                                    <button class="hover:text-blue-400">
-                                        Chỉnh sửa
-                                    </button>
+                                    <nuxt-link :to="{ name: 'dashboard-category-id', params: { id: cate.id }}"
+                                    class="hover:text-blue-400"
+                                    >Chỉnh sửa</nuxt-link>
                                     <span> | </span>
-                                    <button class="hover:text-blue-400">
-                                        Sửa nhanh
-                                    </button>
-                                    <span> | </span>
-                                    <button class="hover:text-blue-400">
+                                    <button @click.prevent="destroy(cate.id)" class="hover:text-blue-400">
                                         Xóa
                                     </button>
                                     <span> | </span>
@@ -182,6 +195,7 @@
 </template>
 
 <script>
+    import util from '../../../helpers/util';
     import { Message } from 'element-ui';
     import { ValidationProvider, ValidationObserver } from "vee-validate";
     export default {
@@ -215,23 +229,12 @@
             },
             selectOptions() {
                 const tree = this.category;
-                const flat = [];
-
-                add(tree, '');
-
-                return flat;
-
-                function add(nodes, prefix) {
-                    nodes.forEach(node => {
-                        flat.push({
-                            ...node,
-                            name: prefix + node.name
-                        });
-
-                        add(node.children_categories  || [], prefix + '&nbsp;&nbsp;');
-                    });
-                }
+                return util.recursiveCategory(tree, '&nbsp;&nbsp;');
             },
+            tableCategoryData() {
+                const tree = this.category;
+                return util.recursiveCategory(tree, '-');
+            }
         },
         methods: {
             click() {
@@ -255,7 +258,7 @@
                         type: 'success',
                         message: 'Thêm danh mục thành công',
                     });
-                    this.$emit('category-store');
+                    this.$emit('refresh-data');
                 } catch (error) {
                     Message({
                         type: 'error',
@@ -272,6 +275,18 @@
                     }
                 });
 		    },
+            async destroy(id) {
+                try {
+                    await this.$services.Category.delete(id);
+                    Message({
+                        type: 'success',
+                        message: 'Xoá thành công'
+                    });
+                    this.$emit('refresh-data')
+                } catch (error) {
+                    console.log(error);
+                }
+            },
             console() {
                 console.log('console.log')
             }

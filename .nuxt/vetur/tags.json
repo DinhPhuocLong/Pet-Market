@@ -37,8 +37,5 @@
   },
   "DashboardCategoryFormAdd": {
     "description": "Auto imported from components/dashboard/category/FormAdd.vue"
-  },
-  "DashboardCategoryFormUpdate": {
-    "description": "Auto imported from components/dashboard/category/_FormUpdate.vue"
   }
 }

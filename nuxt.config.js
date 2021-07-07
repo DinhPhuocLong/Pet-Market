@@ -22,7 +22,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    {src:'element-ui/lib/theme-chalk/index.css'} // 1. Configure the css location of element-ui in css
+    // 1. Configure the css location of element-ui in css
+    {src:'element-ui/lib/theme-chalk/index.css'} 
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -30,7 +31,6 @@ export default {
     'plugins/services.js',
     'plugins/vee-validate.js',
     'plugins/filters.js',
-    {src:'plugins/element-ui', ssr: false},
     {src: 'plugins/owl.js', ssr: false}, // Only works on client side
   ],
 

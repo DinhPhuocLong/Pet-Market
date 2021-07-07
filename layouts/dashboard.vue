@@ -1,4 +1,5 @@
 <template>
+    <client-only>
     <div class="leading-normal tracking-normal" id="main-body">
         <div class="flex flex-wrap">
 
@@ -16,4 +17,5 @@
             </div>
         </div>
     </div>
+    </client-only>
 </template>

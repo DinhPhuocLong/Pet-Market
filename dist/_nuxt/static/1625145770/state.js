@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1625145770",layout:"default",error:a,state:{auth:{user:a,loggedIn:false,strategy:"laravelJWT"}},serverRendered:true,routePath:b,config:{baseURL:"http:\u002F\u002Flocalhost:8000\u002Fapi",_app:{basePath:b,assetsPath:"\u002F_nuxt\u002F",cdnURL:a}}}}(null,"\u002F"));
