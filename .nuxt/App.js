@@ -10,12 +10,15 @@ import '..\\node_modules\\@nuxtjs\\tailwindcss\\dist\\runtime\\tailwind.css'
 
 import '..\\node_modules\\element-ui\\lib\\theme-chalk\\index.css'
 
+import _771842db from '..\\layouts\\blogs.vue'
+import _4c0f576a from '..\\layouts\\contact.vue'
 import _5fa3735e from '..\\layouts\\dashboard.vue'
 import _6f6c098b from '..\\layouts\\default.vue'
-import _1d68088e from '..\\layouts\\lien-he.vue'
 import _77a66d33 from '..\\layouts\\login.vue'
+import _00e60039 from '..\\layouts\\product.vue'
+import _2d297bec from '..\\layouts\\shop.vue'
 
-const layouts = { "_dashboard": sanitizeComponent(_5fa3735e),"_default": sanitizeComponent(_6f6c098b),"_lien-he": sanitizeComponent(_1d68088e),"_login": sanitizeComponent(_77a66d33) }
+const layouts = { "_blogs": sanitizeComponent(_771842db),"_contact": sanitizeComponent(_4c0f576a),"_dashboard": sanitizeComponent(_5fa3735e),"_default": sanitizeComponent(_6f6c098b),"_login": sanitizeComponent(_77a66d33),"_product": sanitizeComponent(_00e60039),"_shop": sanitizeComponent(_2d297bec) }
 
 export default {
   render (h, props) {

@@ -23,6 +23,12 @@
   "TheHeader": {
     "description": "Auto imported from components/TheHeader.vue"
   },
+  "TheHeaderSecond": {
+    "description": "Auto imported from components/TheHeaderSecond.vue"
+  },
+  "TheHeaderThird": {
+    "description": "Auto imported from components/TheHeaderThird.vue"
+  },
   "TopBrands": {
     "description": "Auto imported from components/TopBrands.vue"
   },
