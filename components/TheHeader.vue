@@ -14,30 +14,30 @@
                 style="display:none; z-index: 9999;">
                 <div class="p-3 flex justify-end font-bold bg-red-500">
                     <button class="toggle-close-menu text-white focus:outline-none">
-                        Close
+                        Đóng
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
                 <div>
                     <ul>
                         <li class="p-4 border-b hover:bg-red-500 hover:text-white transition-all duration-500">
-                            <a href="#">Home</a>
+                            <a href="#">Trang chủ</a>
                         </li>
                         <li
                             class="toggle-menu-items-link p-4 border-b hover:bg-red-500 hover:text-white transition-all duration-500 flex items-center justify-between">
-                            <a href="#">Shop</a>
+                            <a href="#">Cửa hàng</a>
                             <button class="toggle-menu-items-link-btn focus:outline-none">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
                         </li>
                         <li class="p-4 border-b hover:bg-red-500 hover:text-white transition-all duration-500">
-                            <a href="#">Products</a>
+                            <a href="#">Sản phẩm</a>
                         </li>
                         <li class="p-4 border-b hover:bg-red-500 hover:text-white transition-all duration-500">
-                            <a href="#">Blogs</a>
+                            <a href="#">Tin tức</a>
                         </li>
                         <li class="p-4 border-b hover:bg-red-500 hover:text-white transition-all duration-500">
-                            <a href="#">Pages</a>
+                            <a href="#">Liên hệ</a>
                         </li>
                     </ul>
                 </div>
@@ -140,13 +140,13 @@
                             </a>
                         </li>
                         <li class="group">
-                            <a href="#" class="font-semibold">
-                                Shop
+                            <nuxt-link to="/shop" class="font-semibold">
+                                Cửa Hàng
                              <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                 <path fill="none" d="M0 0h24v24H0z"/>
                                 <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="white"/>
                              </svg>
-                            </a>
+                            </nuxt-link>
                             <!--Start Dropdown-menu-->
                             <div class="grid grid-cols-4 gap-2 w-full p-6 absolute top-full left-0 bg-white shadow-md 
                             mt-14 opacity-0 invisible group-hover:mt-4 group-hover:opacity-100 group-hover:visible transition-all duration-500"
@@ -315,13 +315,13 @@
                             <!--End Dropdown-menu-->
                         </li>
                         <li class="group">
-                            <a href="#" class="font-semibold">
-                                Product
+                            <nuxt-link to="/product" class="font-semibold">
+                                Sản Phẩm
                              <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                 <path fill="none" d="M0 0h24v24H0z"/>
                                 <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="white"/>
                              </svg>
-                            </a>
+                            </nuxt-link>
                             <!--Dropdown Menu-->
                             <div class="grid grid-cols-4 gap-2 w-full p-6 absolute top-full left-0 bg-white shadow-md 
                             mt-14 opacity-0 invisible group-hover:mt-4 group-hover:opacity-100 group-hover:visible transition-all duration-500"
@@ -489,13 +489,13 @@
                             </div>
                         </li>
                         <li class="group">
-                            <a href="#" class="font-semibold">
-                                Blog
+                            <nuxt-link to="/blogs" class="font-semibold">
+                                Tin Tức
                              <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                 <path fill="none" d="M0 0h24v24H0z"/>
                                 <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="white"/>
                              </svg>
-                            </a>
+                            </nuxt-link>
                             <!--Dropdown Menu-->
                             <div class="grid grid-cols-3 gap-2 w-full p-6 absolute top-full left-0 bg-white shadow-md 
                             mt-14 opacity-0 invisible group-hover:mt-4 group-hover:opacity-100 group-hover:visible transition-all duration-500"
@@ -657,7 +657,7 @@
                             </div>
                         </li>
                         <li class="relative group">
-                            <nuxt-link to="/lien-he" class="font-semibold">
+                            <nuxt-link to="/contact" class="font-semibold">
                                 Liên hệ
                              <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                 <path fill="none" d="M0 0h24v24H0z"/>
@@ -685,8 +685,8 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="w-60 text-white font-semibold text-lg leading-none">
-                    <span>Free Shipping > 50$</span>
+                <div class="w-80 text-white font-semibold text-lg leading-none">
+                    <span class="uppercase">Miễn phí giao hàng > 500.000đ</span>
                 </div>
             </div>
         </div>

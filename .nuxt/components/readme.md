@@ -14,6 +14,8 @@ You can directly use them in pages and other components without the need to impo
 - `<Categories>` | `<categories>` (components/Categories.vue)
 - `<TheFooter>` | `<the-footer>` (components/TheFooter.vue)
 - `<TheHeader>` | `<the-header>` (components/TheHeader.vue)
+- `<TheHeaderSecond>` | `<the-header-second>` (components/TheHeaderSecond.vue)
+- `<TheHeaderThird>` | `<the-header-third>` (components/TheHeaderThird.vue)
 - `<TopBrands>` | `<top-brands>` (components/TopBrands.vue)
 - `<TrendingProducts>` | `<trending-products>` (components/TrendingProducts.vue)
 - `<DashboardNavBar>` | `<dashboard-nav-bar>` (components/dashboard/NavBar.vue)

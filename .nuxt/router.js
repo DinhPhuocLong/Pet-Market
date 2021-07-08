@@ -4,13 +4,16 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _db6efcb8 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
-const _eadf732c = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
-const _27fa032c = () => interopDefault(import('..\\pages\\dashboard\\category\\index.vue' /* webpackChunkName: "pages/dashboard/category/index" */))
-const _5437e981 = () => interopDefault(import('..\\pages\\dashboard\\login.vue' /* webpackChunkName: "pages/dashboard/login" */))
-const _54df33bb = () => interopDefault(import('..\\pages\\dashboard\\register.vue' /* webpackChunkName: "pages/dashboard/register" */))
-const _6e46e094 = () => interopDefault(import('..\\pages\\dashboard\\category\\_id.vue' /* webpackChunkName: "pages/dashboard/category/_id" */))
-const _3e80a856 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _2204010e = () => interopDefault(import('..\\pages\\blogs.vue' /* webpackChunkName: "pages/blogs" */))
+const _252729f0 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
+const _4b72ad86 = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
+const _dbd7d752 = () => interopDefault(import('..\\pages\\product.vue' /* webpackChunkName: "pages/product" */))
+const _3337603e = () => interopDefault(import('..\\pages\\shop.vue' /* webpackChunkName: "pages/shop" */))
+const _034b3748 = () => interopDefault(import('..\\pages\\dashboard\\category\\index.vue' /* webpackChunkName: "pages/dashboard/category/index" */))
+const _151a509d = () => interopDefault(import('..\\pages\\dashboard\\login.vue' /* webpackChunkName: "pages/dashboard/login" */))
+const _7f9c271f = () => interopDefault(import('..\\pages\\dashboard\\register.vue' /* webpackChunkName: "pages/dashboard/register" */))
+const _256328a0 = () => interopDefault(import('..\\pages\\dashboard\\category\\_id.vue' /* webpackChunkName: "pages/dashboard/category/_id" */))
+const _f8d0ca8c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -24,32 +27,44 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/blogs",
+    component: _2204010e,
+    name: "blogs"
+  }, {
     path: "/contact",
-    component: _db6efcb8,
+    component: _252729f0,
     name: "contact"
   }, {
     path: "/dashboard",
-    component: _eadf732c,
+    component: _4b72ad86,
     name: "dashboard"
   }, {
+    path: "/product",
+    component: _dbd7d752,
+    name: "product"
+  }, {
+    path: "/shop",
+    component: _3337603e,
+    name: "shop"
+  }, {
     path: "/dashboard/category",
-    component: _27fa032c,
+    component: _034b3748,
     name: "dashboard-category"
   }, {
     path: "/dashboard/login",
-    component: _5437e981,
+    component: _151a509d,
     name: "dashboard-login"
   }, {
     path: "/dashboard/register",
-    component: _54df33bb,
+    component: _7f9c271f,
     name: "dashboard-register"
   }, {
     path: "/dashboard/category/:id",
-    component: _6e46e094,
+    component: _256328a0,
     name: "dashboard-category-id"
   }, {
     path: "/",
-    component: _3e80a856,
+    component: _f8d0ca8c,
     name: "index"
   }],
 

@@ -10,6 +10,8 @@ const components = {
   Categories: () => import('../..\\components\\Categories.vue' /* webpackChunkName: "components/categories" */).then(c => wrapFunctional(c.default || c)),
   TheFooter: () => import('../..\\components\\TheFooter.vue' /* webpackChunkName: "components/the-footer" */).then(c => wrapFunctional(c.default || c)),
   TheHeader: () => import('../..\\components\\TheHeader.vue' /* webpackChunkName: "components/the-header" */).then(c => wrapFunctional(c.default || c)),
+  TheHeaderSecond: () => import('../..\\components\\TheHeaderSecond.vue' /* webpackChunkName: "components/the-header-second" */).then(c => wrapFunctional(c.default || c)),
+  TheHeaderThird: () => import('../..\\components\\TheHeaderThird.vue' /* webpackChunkName: "components/the-header-third" */).then(c => wrapFunctional(c.default || c)),
   TopBrands: () => import('../..\\components\\TopBrands.vue' /* webpackChunkName: "components/top-brands" */).then(c => wrapFunctional(c.default || c)),
   TrendingProducts: () => import('../..\\components\\TrendingProducts.vue' /* webpackChunkName: "components/trending-products" */).then(c => wrapFunctional(c.default || c)),
   DashboardNavBar: () => import('../..\\components\\dashboard\\NavBar.vue' /* webpackChunkName: "components/dashboard-nav-bar" */).then(c => wrapFunctional(c.default || c)),

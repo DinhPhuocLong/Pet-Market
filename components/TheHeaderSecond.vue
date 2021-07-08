@@ -1,5 +1,5 @@
 <template>
-  <div class="font-nunito antialiased mb-12 lg:mb-0 body-color">
+    <div>
     <!-- header mobile -->
     <header class="w-full bg-white lg:hidden">
         <div class="w-[94%] xl:w-11/12 mx-auto py-4 flex justify-between font-bold">
@@ -77,25 +77,6 @@
                 <div><a href="#"><i class="far fa-heart"></i></a></div>
             </div>
         </div>
-
-        <!-- breadcum mobile -->
-        <div class="flex justify-center items-center bg-center bg-cover py-10"
-            style="background-image: url('https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/breadcumd.jpg');">
-            <div class="text-white text-center">
-                <h1 class="text-[40px] font-semibold text-white">Contact</h1>
-                <div class="mt-3 text-center text-[13px]">
-                    <a class="mr-1" href="#">
-                        Home
-                    </a>
-                    <span class="inline-block mr-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24">
-                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" fill="white"/>
-                        </svg>
-                    </span>
-                        Contact
-                </div>
-            </div>
-        </div>
     </header>
 
     <!-- header desktop -->
@@ -124,13 +105,13 @@
                                     </a>
                                 </li>
                                 <li class="group">
-                                    <a href="#" class="font-semibold">
-                                        Shop
+                                    <nuxt-link to="/shop" class="font-semibold">
+                                        Cửa Hàng
                                         <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                             <path fill="none" d="M0 0h24v24H0z"/>
                                             <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="gray"/>
                                         </svg>
-                                    </a>
+                                    </nuxt-link>
                                     <!--Start Dropdown-menu-->
                                     <div class="grid grid-cols-4 gap-2 w-full p-6 absolute top-full left-0 bg-white shadow-md 
                                         mt-14 opacity-0 invisible group-hover:mt-4 group-hover:opacity-100 group-hover:visible transition-all duration-500"
@@ -329,13 +310,13 @@
                                     <!--End Dropdown-menu-->
                                 </li>
                                 <li class="group">
-                                    <a href="#" class="font-semibold">
-                                        Product
+                                    <nuxt-link to="/product" class="font-semibold">
+                                        Sản Phẩm
                                         <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                             <path fill="none" d="M0 0h24v24H0z"/>
                                             <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="gray"/>
                                         </svg>
-                                    </a>
+                                    </nuxt-link>
                                     <!--Dropdown Menu-->
                                     <div class="grid grid-cols-4 gap-2 w-full p-6 absolute top-full left-0 bg-white shadow-md 
                                         mt-14 opacity-0 invisible group-hover:mt-4 group-hover:opacity-100 group-hover:visible transition-all duration-500"
@@ -533,13 +514,13 @@
                                     </div>
                                 </li>
                                 <li class="group">
-                                    <a href="#" class="font-semibold">
-                                        Blog
+                                    <nuxt-link to="blogs" class="font-semibold">
+                                        Tin Tức
                                         <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                             <path fill="none" d="M0 0h24v24H0z"/>
                                             <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="gray"/>
                                         </svg>
-                                    </a>
+                                    </nuxt-link>
                                     <!--Dropdown Menu-->
                                     <div class="grid grid-cols-3 gap-2 w-full p-6 absolute top-full left-0 bg-white shadow-md 
                                         mt-14 opacity-0 invisible group-hover:mt-4 group-hover:opacity-100 group-hover:visible transition-all duration-500"
@@ -717,13 +698,13 @@
                                     </div>
                                 </li>
                                 <li class="relative group">
-                                    <a href="#" class="font-semibold">
+                                    <nuxt-link to="/contact" class="font-semibold">
                                         Liên hệ
                                         <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                             <path fill="none" d="M0 0h24v24H0z"/>
                                             <path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z" fill="gray"/>
                                         </svg>
-                                    </a>
+                                    </nuxt-link>
                                     <!--Dropdown Menu-->
                                     <div class="w-max absolute top-full left-0 bg-white shadow-md 
                                         mt-14 opacity-0 invisible group-hover:mt-4 group-hover:opacity-100 group-hover:visible transition-all duration-500"
@@ -751,7 +732,10 @@
                     <div class="w-1/4 flex justify-end gap-5 text-2xl pl-10">
                         <div class="toggle-search hover:text-red-500 transition-all duration-500">
                             <a href="#">
-                                <i class="fas fa-search"></i>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 
+                                            3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" fill='black'/>
+                                </svg>   
                             </a>
                         </div>
                         <!--Toggle Search Popup-->
@@ -877,19 +861,36 @@
                         
                         <div class="hover:text-red-500 transition-all duration-500">
                             <a href="#">
-                                <i class="far fa-user"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 
+                                    2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 
+                                    7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 
+                                    1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 
+                                    2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 
+                                    10.669h24c0-2.142-1.44-7.557-5.631-10.647z" fill='black'/>
+                                </svg>
                             </a>
                         </div>
                         <div class="hover:text-red-500 transition-all duration-500">
                             <a href="#">
-                                <i class="far fa-heart"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 
+                                    1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 
+                                    0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 
+                                    4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 
+                                    0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z" fill='black'/>
+                                </svg>
                             </a>
                         </div>
                         <div class="shopping-cart relative">
-                            <i class="bi bi-bag"></i>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 
+                                1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 
+                                .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z" fill='black'/>
+                            </svg>
                             <!-- <i class="fas fa-shopping-bag"></i> -->
                             <span
-                                class="inline-block nav-color w-5 h-5 leading-5 absolute rounded-full font-sans text-xs text-white text-center -top-2 -right-3">
+                                class="inline-block bg-yellow-500 w-5 h-5 leading-5 absolute rounded-full font-sans text-xs text-white text-center -top-2 -right-3">
                                 0
                             </span>
                         </div>
@@ -897,206 +898,8 @@
                 </div>
             </div>
         </div>
-
-        <div class="flex justify-center items-center bg-center bg-cover bg-no-repeat py-9" style="background-image: url('https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/breadcumd.jpg')">
-            <div class="text-white text-center">
-                <h1 class="text-[40px] lg:text-[60px] text-white font-bold">Liên hệ</h1>
-                <div class="mt-3 text-center text-[13px]">
-                    <a class="mr-1" href="#">
-                        Trang chủ
-                    </a>
-                    <span class="inline-block mr-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24">
-                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" fill="white"/>
-                        </svg>
-                    </span>
-                        Liên hệ
-                </div>
-            </div>
-        </div>
     </header>
-
-    <!-- Contact Content-->
-    <Nuxt />
-    
-    <!--Footer-->
-    <footer class="w-full bg-gray-100">
-            <div class="w-full border-b border-solid border-gray-200">
-                <div class="w-[94%] xl:w-11/12 max-w-[1440px] mx-auto">
-                    <div class="md:grid md:grid-cols-2 md:py-6 lg:grid-cols-3 justify-center">
-                        <div
-                            class="text-center md:text-left flex flex-col md:flex-row md:gap-6 items-center md:border-r border-solid border-gray-300">
-                            <div class="p-3 text-center text-2xl border-2 border-solid border-red-500 rounded-full w-14 h-14 leading-12 inline-block">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M19 9.062s-5.188-.333-7 1.938c2-4.896 7-5.938 7-5.938v-2l5 4-5 4.019v-2.019zm-18.974 14.938h23.947l-11.973-11.607-11.974 
-                                11.607zm1.673-14l10.291-7.488 3.053 2.218c.712-.459 1.391-.805 1.953-1.054l-5.006-3.637-11.99 8.725v12.476l7.352-7.127-5.653-4.113zm15.753 
-                                4.892l6.548 6.348v-11.612l-6.548 5.264z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h2 class="text-xl font-bold">Join now and get 10% off <br>
-                                    your next purchase!</h2>
-                            </div>
-                        </div>
-
-                        <div class="text-center">
-                            <p class="text-gray-400 font-bold px-10 text-base my-4">Subscribe to the weekly newsletter for
-                                all
-                                the <br>
-                                latest updates</p>
-                        </div>
-
-                        <div class="col-start-1 col-end-3 lg:col-auto mt-4">
-                            <form class="flex items-center w-full mx-auto border border-solid border-gray-300 rounded-full"
-                                style="max-width: 480px;">
-                                <input type="text" class="w-full border-black rounded-l-full 
-                        outline-none py-4 ml-10 bg-gray-100 text-sm font-bold
-                        " placeholder="Email Address">
-                                <span class="">
-                                    <input type="submit" value="SUBSCRIBE" class="block relative top-0 
-                            bg-black rounded-full px-4 leading-4 h-11 m-1
-                            text-xs text-white
-                            ">
-                                </span>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- information -->
-            <div class="w-full border-b border-solid border-gray-200 pb-10">
-                <div class="w-[94%] xl:w-11/12 max-w-[1440px] mx-auto mt-4">
-                    <div class="grid md:grid-cols-2 lg:grid-cols-4 md:items-end lg:items-start">
-                        <div class="md:mb-10">
-                            <div class="py-4">
-                                <img class="max-h-11"
-                                    src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/logo.png"
-                                    alt="">
-                                <p class="text-sm font-medium text-gray-500 leading-6">If you have any question, please
-                                    contact
-                                    us
-                                    at
-                                    <a href="#" class="text-yellow-600">Longdpps10786@gmail.com.</a>
-                                </p>
-                            </div>
-                            <div class="flex flex-col text-yellow-600">
-                                <div class="flex flex-col md:flex-row md:items-center mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 
-                                        4.198 3.469 9.21 8 16.398 4.531-7.188 
-                                        8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" fill="orange"/>
-                                    </svg>
-                                    <span class="text-black text-sm font-bold mb-2">30 Buttonwood St.Pataskala <br>
-                                        OH 43062</span>
-                                </div>
-                                <div class="flex flex-col md:flex-row md:items-center mb-2 md:mb-0">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 
-                                        1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z" fill="orange"/> 
-                                    </svg>
-                                    <span class="text-black text-sm font-bold mb-2 md:mb-0">+84 394 718 199</span>
-                                </div>
-                            </div>
-                            <ul class="flex gap-3 mt-6">
-                                <li>
-                                    <a href="#" class="bg-black inline-block w-9 h-9 rounded-full text-center leading-9
-                                    text-white hover:bg-yellow-500">
-
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="bg-black inline-block w-9 h-9 rounded-full text-center leading-9
-                                    text-white hover:bg-yellow-500">
-                    
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="bg-black inline-block w-9 h-9 rounded-full text-center leading-9
-                                    text-white hover:bg-yellow-500"><i class="fab fa-facebook-f"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="bg-black inline-block w-9 h-9 rounded-full text-center leading-9
-                                    text-white hover:bg-yellow-500"><i class="fab fa-facebook-f"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mt-10 md:mt-0 md:mb-10">
-                            <p class="text-black font-bold text-lg py-4">Corporate</p>
-                            <ul class="text-gray-400 tracking-tight text-base font-normal">
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">Careers</a>
-                                </li>
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">About Us</a>
-                                </li>
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">Event Sponsorships</a>
-                                </li>
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">Vendors</a>
-                                </li>
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">Affiliate Program</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="mt-10 md:mt-0 md:mb-10">
-                            <p class="text-black font-bold text-lg py-4">Corporate</p>
-                            <ul class="text-gray-400 tracking-tight text-base font-normal">
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">Careers</a>
-                                </li>
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">About Us</a>
-                                </li>
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">Event Sponsorships</a>
-                                </li>
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">Vendors</a>
-                                </li>
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">Affiliate Program</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="mt-10 md:mt-0 md:mb-10">
-                            <p class="text-black font-bold text-lg py-4">Corporate</p>
-                            <ul class="text-gray-400 tracking-tight text-base font-normal">
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">Careers</a>
-                                </li>
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">About Us</a>
-                                </li>
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">Event Sponsorships</a>
-                                </li>
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">Vendors</a>
-                                </li>
-                                <li class="my-0.5 hover:text-yellow-500">
-                                    <a href="#">Affiliate Program</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-[94%] xl:w-11/12 max-w-[1440px] mx-auto text-center py-3 flex items-center justify-between">
-                <div>
-                    <span class="text-black font-medium text-xs">@ 2021 FPT PETSTORE</span>
-                </div>
-                <div>
-                    <img class="mx-auto mt-4 md:mt-0" src="https://developers.momo.vn/images/favicon/ms-icon-310x310.png"
-                        width="35px" alt="">
-                </div>
-            </div>
-    </footer>
-  </div>
+    </div>
 </template>
 
 <script>
