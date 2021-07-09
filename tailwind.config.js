@@ -14,6 +14,26 @@ content: [
 presets: [],
 darkMode: false, // or 'media' or 'class'
 theme: {
+    extend: {
+        colors: {
+            '[#ebebeb]': '#ebebeb',
+            'petshop-orange': '#ed6436',
+        },
+        animation: {
+            OpenMenuMobile: 'OpenMenuMobile .7s',
+            toggleScale: 'toggleScale .5s',
+        },
+        keyframes: {
+            OpenMenuMobile: {
+              '0%': { opacity: 0, width: '0%', transform: 'translateX(-30%)', transition: 'all .3s ease-in'},
+              '100%': { opacity: 1, width: '100%', transform: 'translateX(0)', transition: 'all .3s ease-in'}
+            },
+            toggleScale: {
+                '0%': { opacity: 0, width: '0%', transform: 'rolate(0deg)', transition: 'all .3s ease-in'},
+                '100%': { opacity: 1, width: '100%', transform: 'rolate(360deg)', transition: 'all .3s ease-in'}
+              },
+        }
+    },
 screens: {
     'ip6': '375px',
     'duo': '540px',
@@ -350,6 +370,7 @@ fontSize: {
     '[32px]': '32px',
     '[34px]': '34px',
     '[40px]': '40px',
+    '[50px]': '50px',
     '[52px]': '52px',
     '[60px]': '60px',
 },
@@ -633,6 +654,7 @@ minWidth: {
     full: '100%',
     min: 'min-content',
     max: 'max-content',
+    '[52px]': '52px',
 },
 objectPosition: {
     bottom: 'bottom',
@@ -890,8 +912,11 @@ width: (theme) => ({
     '[47.5%]': '47.5%',
     '[97%]': '97%',
     '[94%]': '94%',
-    '[75%]': '75%',
     '[25%]': '25%',
+    '[12%]': '12%',
+    '[75%]': '75%',
+    'static-banner-lg': 'calc(50% - 1rem)',
+    'static-banner': 'calc(50% - 0.5rem)',
 }),
 zIndex: {
     auto: 'auto',
