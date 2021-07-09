@@ -11,8 +11,10 @@ const _36f02af3 = () => interopDefault(import('..\\pages\\product.vue' /* webpac
 const _432fa1bc = () => interopDefault(import('..\\pages\\shop.vue' /* webpackChunkName: "pages/shop" */))
 const _27fa032c = () => interopDefault(import('..\\pages\\dashboard\\category\\index.vue' /* webpackChunkName: "pages/dashboard/category/index" */))
 const _5437e981 = () => interopDefault(import('..\\pages\\dashboard\\login.vue' /* webpackChunkName: "pages/dashboard/login" */))
+const _30490aca = () => interopDefault(import('..\\pages\\dashboard\\product\\index.vue' /* webpackChunkName: "pages/dashboard/product/index" */))
 const _54df33bb = () => interopDefault(import('..\\pages\\dashboard\\register.vue' /* webpackChunkName: "pages/dashboard/register" */))
 const _6e46e094 = () => interopDefault(import('..\\pages\\dashboard\\category\\_id.vue' /* webpackChunkName: "pages/dashboard/category/_id" */))
+const _6dad67c3 = () => interopDefault(import('..\\pages\\dashboard\\product\\_id.vue' /* webpackChunkName: "pages/dashboard/product/_id" */))
 const _3e80a856 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -27,7 +29,7 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/blogs",
+    path: "/tin-tuc",
     component: _ac31e5d6,
     name: "blogs"
   }, {
@@ -39,7 +41,7 @@ export const routerOptions = {
     component: _eadf732c,
     name: "dashboard"
   }, {
-    path: "/product",
+    path: "/san-pham",
     component: _36f02af3,
     name: "product"
   }, {
@@ -55,6 +57,10 @@ export const routerOptions = {
     component: _5437e981,
     name: "dashboard-login"
   }, {
+    path: "/dashboard/product",
+    component: _30490aca,
+    name: "dashboard-product"
+  }, {
     path: "/dashboard/register",
     component: _54df33bb,
     name: "dashboard-register"
@@ -62,6 +68,10 @@ export const routerOptions = {
     path: "/dashboard/category/:id",
     component: _6e46e094,
     name: "dashboard-category-id"
+  }, {
+    path: "/dashboard/product/:id",
+    component: _6dad67c3,
+    name: "dashboard-product-id"
   }, {
     path: "/",
     component: _3e80a856,

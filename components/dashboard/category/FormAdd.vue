@@ -159,8 +159,6 @@
                                 </td>
 
 
-
-
                                 <td class="px-5 py-5 border-b border-gray-200 text-sm">
                                     <p class="text-gray-900 whitespace-no-wrap">
                                         {{ cate.created_at | formatDate}}
