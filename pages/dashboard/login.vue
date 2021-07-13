@@ -96,7 +96,6 @@
 
 <script>
 import { ValidationProvider, ValidationObserver } from "vee-validate";
-import { Message } from 'element-ui'
 export default {
     layout: 'login',
 	middleware: 'unauthenticated',

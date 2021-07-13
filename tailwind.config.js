@@ -11,6 +11,7 @@ content: [
     'src/utils/common.js',
 ],
 },
+import: true,
 presets: [],
 darkMode: false, // or 'media' or 'class'
 theme: {
@@ -601,6 +602,10 @@ lineHeight: {
     8: '2rem',
     9: '2.25rem',
     10: '2.5rem',
+    11: '2.75rem',
+    12: '3rem',
+    13: '3.25rem',
+    14: '3.5rem',
 },
 listStyleType: {
     none: 'none',

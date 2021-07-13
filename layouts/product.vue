@@ -1,6 +1,6 @@
 <template>
   <div class="font-nunito antialiased mb-12 lg:mb-0 body-color">
-    <TheHeaderSecond />
+    <ProductDetailHeader />
 
     <!-- Contact Content-->
     <Nuxt />

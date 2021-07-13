@@ -89,7 +89,7 @@
 <script>
 import util from "../../../helpers/util";
 import { mapState } from 'vuex';
-import { Message } from 'element-ui';
+// import { Message } from 'element-ui';
 export default {
     layout: 'dashboard',
     data() {
@@ -119,37 +119,21 @@ export default {
             const tree = this.category;
             return util.recursiveCategory(tree, '&nbsp;&nbsp;');
         },
-
-        recursiveCategory(tree, concatenatedString) {
-        const flat = [];
-        
-        add(tree, '', concatenatedString);
-
-        return flat;
-
-        function add(nodes, prefix, concatenatedString) {
-            nodes.forEach(node => {
-                flat.push({
-                    ...node,
-                    name: prefix + node.name
-                });
-
-                add(node.children_categories  || [], prefix + concatenatedString);
-            });
-        }
-    },
     },
     methods: {
         async categoryUpdate() {
             try {
+                if (this.currentCategory.category_id == this.currentCategory.id) {
+                    this.currentCategory.category_id = null;
+                }
                 const id = this.currentCategory.id;
                 await this.$services.Category.update(id, this.currentCategory);
                 this.isShowNotificationMessage = true;
             } catch (error) {
-                Message({
-                    type: 'error',
-                    message: error.response.data
-                })
+                // Message({
+                //     type: 'error',
+                //     message: error.response.data
+                // })
             }
         },
         onSubmit() {

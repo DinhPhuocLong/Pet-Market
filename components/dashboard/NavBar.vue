@@ -74,14 +74,22 @@
         },
         methods: {
             toggleSidebar() {
-                this.$store.dispatch('toggleSidebar')
+                this.$store.dispatch('toggleSidebar');
             },
             async logout() {
                 try {
                     await this.$auth.logout();
-                    this.$router.push({ name: 'dashboard-login'})
+                    // Message({
+                    //     type: 'success',
+                    //     message: 'Đã đăng xuất thành công'
+                    // });
+                    this.$router.push({ name: 'dashboard-login'});
+
                 } catch (error) {
-                    console.log(error);
+                    // Message({
+                    //     type: 'error',
+                    //     message: 'Đã xảy ra lỗi'
+                    // });
                 }
                 
             }

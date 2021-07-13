@@ -1,8 +1,8 @@
 <template>
     <div class="font-nunito">
         <h1 class="text-3xl font-bold">Danh mục sản phẩm</h1>
-        <div class="w-full flex mt-10">
-            <div class="w-1/4">
+        <div class="w-full xl:flex mt-10">
+            <div class="xl:w-1/4">
                 <h2 class="text-lg font-semibold">Thêm danh mục</h2>
                 <ValidationObserver ref="form">
                 <form class="mt-4" 
@@ -79,7 +79,7 @@
                 </form>
                 </ValidationObserver>
             </div>
-            <div class="w-3/4 ml-20">
+            <div class="xl:w-3/4 ml-10">
                 <select class="py-0.5 px-1.5 text-sm border border-solid border-gray-400 rounded-sm"
                     v-model="tableAction">
                     <option value="-1">Hành động</option>
@@ -89,7 +89,7 @@
                     :disabled="isDisabled" @click="console();">
                     Áp dụng
                 </button>
-                <div class="inline-block min-w-full border border-solid border-gray-200 overflow-hidden mt-4">
+                <div class="inline-block w-full border border-solid border-gray-200 overflow-x-auto mt-4">
                     <table class="min-w-full leading-normal">
                         <thead>
                             <tr>
@@ -118,11 +118,6 @@
                                 <th
                                     class="bg-white px-5 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                     Khởi tạo
-                                </th>
-
-                                <th
-                                    class="bg-white px-5 py-3 border-b-2 border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                    Cập nhật lần cuối
                                 </th>
                             </tr>
                         </thead>
@@ -164,13 +159,8 @@
                                         {{ cate.created_at | formatDate}}
                                     </p>
                                 </td>
-                                <td class="px-5 py-5 border-b border-gray-200 text-sm">
-                                    <p class="text-gray-900 whitespace-no-wrap">
-                                        {{ cate.updated_at | formatDate}}
-                                    </p>
-                                </td>
-                                <div class="w-full text-black text-[12px] absolute px-5 top-7 left-0 mt-14 
-                                group-hover:mt-4 group-hover:opacity-100 group-hover:visible transition-all duration-500">
+                                <div class="w-full text-black text-[12px] absolute px-5 left-0 bottom-0 opacity-0
+                                group-hover:opacity-100 group-hover:visible transition-all duration-500">
                                     <nuxt-link :to="{ name: 'dashboard-category-id', params: { id: cate.id }}"
                                     class="hover:text-blue-400"
                                     >Chỉnh sửa</nuxt-link>
@@ -194,7 +184,6 @@
 
 <script>
     import util from '../../../helpers/util';
-    import { Message } from 'element-ui';
     import { ValidationProvider, ValidationObserver } from "vee-validate";
     export default {
         props: ['category'],
@@ -252,10 +241,10 @@
                     this.newCategory.category_id = '';
                     this.newCategory.keywords = ''
                     this.$refs.form.reset();
-                    Message({
-                        type: 'success',
-                        message: 'Thêm danh mục thành công',
-                    });
+                    // Message({
+                    //     type: 'success',
+                    //     message: 'Thêm danh mục thành công',
+                    // });
                     this.$emit('refresh-data');
                 } catch (error) {
                     Message({
@@ -276,10 +265,10 @@
             async destroy(id) {
                 try {
                     await this.$services.Category.delete(id);
-                    Message({
-                        type: 'success',
-                        message: 'Xoá thành công'
-                    });
+                    // Message({
+                    //     type: 'success',
+                    //     message: 'Xoá thành công'
+                    // });
                     this.$emit('refresh-data')
                 } catch (error) {
                     console.log(error);
