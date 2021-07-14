@@ -247,10 +247,10 @@
                     // });
                     this.$emit('refresh-data');
                 } catch (error) {
-                    Message({
-                        type: 'error',
-                        message: error.response.data,
-                    });
+                    // Message({
+                    //     type: 'error',
+                    //     message: error.response.data,
+                    // });
                 }
             },
             onSubmit() {

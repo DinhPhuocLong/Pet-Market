@@ -153,7 +153,7 @@ export default {
 		}
 	},
 	beforeDestroy() {
-		Message.closeAll()
+		// Message.closeAll()
 	},
 }
 </script>

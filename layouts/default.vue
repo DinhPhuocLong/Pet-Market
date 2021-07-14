@@ -1,7 +1,7 @@
 <template>
     <div class="border-box font-nunito antialiased mb-12 lg:mb-0 body-color">
         <header class="w-full nav-color lg:hidden">
-            <HeaderMobile :badgeBg="'navColor'"/>
+            <HeaderMobile :badgeBg="'bg-white'"/>
         </header>
         <HomeHeader />
         <Nuxt />
