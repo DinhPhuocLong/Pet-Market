@@ -1,86 +1,86 @@
 [
   {
-    "name": "blogs",
-    "path": "/blogs",
-    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\blogs.vue",
-    "chunkName": "pages/blogs",
-    "_name": "_2204010e"
+    "name": "404",
+    "path": "*",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\404.vue",
+    "chunkName": "pages/404.vue"
+  },
+  {
+    "name": "home-page",
+    "path": "/",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\index.vue",
+    "chunkName": "pages/index.vue"
+  },
+  {
+    "name": "blog",
+    "path": "/tin-tuc",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\blog\\\\blogs.vue",
+    "chunkName": "pages/blogs.vue"
+  },
+  {
+    "name": "blog-detail",
+    "path": "/tin-tuc/:slug",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\blog\\\\_slug.vue",
+    "chunkName": "pages/blogs.vue"
   },
   {
     "name": "contact",
-    "path": "/contact",
+    "path": "/lien-he",
     "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\contact.vue",
-    "chunkName": "pages/contact",
-    "_name": "_252729f0"
+    "chunkName": "pages/contact.vue"
   },
   {
     "name": "dashboard",
     "path": "/dashboard",
     "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\index.vue",
-    "chunkName": "pages/dashboard/index",
-    "_name": "_4b72ad86"
+    "chunkName": "pages/dashboard/index.vue"
   },
   {
-    "name": "product",
-    "path": "/product",
-    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\product.vue",
-    "chunkName": "pages/product",
-    "_name": "_dbd7d752"
-  },
-  {
-    "name": "shop",
-    "path": "/shop",
-    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\shop.vue",
-    "chunkName": "pages/shop",
-    "_name": "_3337603e"
-  },
-  {
-    "name": "dashboard-category",
+    "name": "category",
     "path": "/dashboard/category",
     "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\category\\\\index.vue",
-    "chunkName": "pages/dashboard/category/index",
-    "_name": "_034b3748"
+    "chunkName": "pages/dashboard/category/index.vue"
   },
   {
-    "name": "dashboard-login",
-    "path": "/dashboard/login",
-    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\login.vue",
-    "chunkName": "pages/dashboard/login",
-    "_name": "_151a509d"
+    "name": "category-id",
+    "path": "/dashboard/category/:id",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\category\\\\_id.vue",
+    "chunkName": "pages/dashboard/category/_id.vue"
   },
   {
     "name": "dashboard-product",
     "path": "/dashboard/product",
     "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\product\\\\index.vue",
-    "chunkName": "pages/dashboard/product/index",
-    "_name": "_49c552ff"
+    "chunkName": "pages/dashboard/product/index.vue"
   },
   {
-    "name": "dashboard-register",
-    "path": "/dashboard/register",
-    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\register.vue",
-    "chunkName": "pages/dashboard/register",
-    "_name": "_7f9c271f"
-  },
-  {
-    "name": "dashboard-category-id",
-    "path": "/dashboard/category/:id",
-    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\category\\\\_id.vue",
-    "chunkName": "pages/dashboard/category/_id",
-    "_name": "_256328a0"
-  },
-  {
-    "name": "dashboard-product-id",
+    "name": "dashboard-product-detail",
     "path": "/dashboard/product/:id",
     "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\product\\\\_id.vue",
-    "chunkName": "pages/dashboard/product/_id",
-    "_name": "_403a0927"
+    "chunkName": "pages/dashboard/product/_id.vue"
   },
   {
-    "name": "index",
-    "path": "/",
-    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_f8d0ca8c"
+    "name": "product",
+    "path": "/san-pham",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\product\\\\index.vue",
+    "chunkName": "pages/product/index.vue"
+  },
+  {
+    "name": "product-detail",
+    "path": "/san-pham/:slug",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\product\\\\_slug.vue",
+    "chunkName": "pages/product/_slug.vue"
+  },
+  {
+    "name": "login",
+    "path": "/dashboard/dang-nhap",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\login.vue",
+    "chunkName": "pages/dashboard/login.vue"
+  },
+  {
+    "name": "register",
+    "path": "/dashboard/dang-ky",
+    "component": "C:\\\\Users\\\\kebin\\\\Desktop\\\\Pet-Market\\\\pages\\\\dashboard\\\\register.vue",
+    "chunkName": "pages/dashboard/register.vue"
   }
 ]

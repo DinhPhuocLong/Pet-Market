@@ -4,18 +4,20 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _2204010e = () => interopDefault(import('..\\pages\\blogs.vue' /* webpackChunkName: "pages/blogs" */))
-const _252729f0 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
-const _4b72ad86 = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
-const _dbd7d752 = () => interopDefault(import('..\\pages\\product.vue' /* webpackChunkName: "pages/product" */))
-const _3337603e = () => interopDefault(import('..\\pages\\shop.vue' /* webpackChunkName: "pages/shop" */))
-const _034b3748 = () => interopDefault(import('..\\pages\\dashboard\\category\\index.vue' /* webpackChunkName: "pages/dashboard/category/index" */))
-const _151a509d = () => interopDefault(import('..\\pages\\dashboard\\login.vue' /* webpackChunkName: "pages/dashboard/login" */))
-const _49c552ff = () => interopDefault(import('..\\pages\\dashboard\\product\\index.vue' /* webpackChunkName: "pages/dashboard/product/index" */))
-const _7f9c271f = () => interopDefault(import('..\\pages\\dashboard\\register.vue' /* webpackChunkName: "pages/dashboard/register" */))
-const _256328a0 = () => interopDefault(import('..\\pages\\dashboard\\category\\_id.vue' /* webpackChunkName: "pages/dashboard/category/_id" */))
-const _403a0927 = () => interopDefault(import('..\\pages\\dashboard\\product\\_id.vue' /* webpackChunkName: "pages/dashboard/product/_id" */))
-const _f8d0ca8c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _fd6727c0 = () => interopDefault(import('..\\pages\\404.vue' /* webpackChunkName: "pages/404.vue" */))
+const _f8d0ca8c = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index.vue" */))
+const _62a47f17 = () => interopDefault(import('..\\pages\\blog\\blogs.vue' /* webpackChunkName: "pages/blogs.vue" */))
+const _14f10de0 = () => interopDefault(import('..\\pages\\blog\\_slug.vue' /* webpackChunkName: "pages/blogs.vue" */))
+const _252729f0 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact.vue" */))
+const _4b72ad86 = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index.vue" */))
+const _034b3748 = () => interopDefault(import('..\\pages\\dashboard\\category\\index.vue' /* webpackChunkName: "pages/dashboard/category/index.vue" */))
+const _256328a0 = () => interopDefault(import('..\\pages\\dashboard\\category\\_id.vue' /* webpackChunkName: "pages/dashboard/category/_id.vue" */))
+const _49c552ff = () => interopDefault(import('..\\pages\\dashboard\\product\\index.vue' /* webpackChunkName: "pages/dashboard/product/index.vue" */))
+const _403a0927 = () => interopDefault(import('..\\pages\\dashboard\\product\\_id.vue' /* webpackChunkName: "pages/dashboard/product/_id.vue" */))
+const _d273ff6a = () => interopDefault(import('..\\pages\\product\\index.vue' /* webpackChunkName: "pages/product/index.vue" */))
+const _d5e141fa = () => interopDefault(import('..\\pages\\product\\_slug.vue' /* webpackChunkName: "pages/product/_slug.vue" */))
+const _151a509d = () => interopDefault(import('..\\pages\\dashboard\\login.vue' /* webpackChunkName: "pages/dashboard/login.vue" */))
+const _7f9c271f = () => interopDefault(import('..\\pages\\dashboard\\register.vue' /* webpackChunkName: "pages/dashboard/register.vue" */))
 
 const emptyFn = () => {}
 
@@ -29,11 +31,23 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/blogs",
-    component: _2204010e,
-    name: "blogs"
+    path: "*",
+    component: _fd6727c0,
+    name: "404"
   }, {
-    path: "/contact",
+    path: "/",
+    component: _f8d0ca8c,
+    name: "home-page"
+  }, {
+    path: "/tin-tuc",
+    component: _62a47f17,
+    name: "blog"
+  }, {
+    path: "/tin-tuc/:slug",
+    component: _14f10de0,
+    name: "blog-detail"
+  }, {
+    path: "/lien-he",
     component: _252729f0,
     name: "contact"
   }, {
@@ -41,41 +55,37 @@ export const routerOptions = {
     component: _4b72ad86,
     name: "dashboard"
   }, {
-    path: "/product",
-    component: _dbd7d752,
-    name: "product"
-  }, {
-    path: "/shop",
-    component: _3337603e,
-    name: "shop"
-  }, {
     path: "/dashboard/category",
     component: _034b3748,
-    name: "dashboard-category"
+    name: "category"
   }, {
-    path: "/dashboard/login",
-    component: _151a509d,
-    name: "dashboard-login"
+    path: "/dashboard/category/:id",
+    component: _256328a0,
+    name: "category-id"
   }, {
     path: "/dashboard/product",
     component: _49c552ff,
     name: "dashboard-product"
   }, {
-    path: "/dashboard/register",
-    component: _7f9c271f,
-    name: "dashboard-register"
-  }, {
-    path: "/dashboard/category/:id",
-    component: _256328a0,
-    name: "dashboard-category-id"
-  }, {
     path: "/dashboard/product/:id",
     component: _403a0927,
-    name: "dashboard-product-id"
+    name: "dashboard-product-detail"
   }, {
-    path: "/",
-    component: _f8d0ca8c,
-    name: "index"
+    path: "/san-pham",
+    component: _d273ff6a,
+    name: "product"
+  }, {
+    path: "/san-pham/:slug",
+    component: _d5e141fa,
+    name: "product-detail"
+  }, {
+    path: "/dashboard/dang-nhap",
+    component: _151a509d,
+    name: "login"
+  }, {
+    path: "/dashboard/dang-ky",
+    component: _7f9c271f,
+    name: "register"
   }],
 
   fallback: false
