@@ -50,7 +50,7 @@
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Danh mục cha
                         </label>
-                        <select class="py-1 px-2" v-model="newCategory.category_id">
+                        <select class="py-1 px-2" v-model="newCategory.parent_id">
                             <option class="" value="">Trống</option>
                                 <option 
                                 v-for="option in selectOptions" 
@@ -161,7 +161,7 @@
                                 </td>
                                 <div class="w-full text-black text-[12px] absolute px-5 left-0 bottom-0 opacity-0
                                 group-hover:opacity-100 group-hover:visible transition-all duration-500">
-                                    <nuxt-link :to="{ name: 'dashboard-category-id', params: { id: cate.id }}"
+                                    <nuxt-link :to="{ name: 'category-id', params: { id: cate.id }}"
                                     class="hover:text-blue-400"
                                     >Chỉnh sửa</nuxt-link>
                                     <span> | </span>
@@ -197,7 +197,7 @@
                 newCategory: {
                     name: '',
                     slug: '',
-                    category_id: '',
+                    parent_id: '',
                     keywords: '',
                     type: 'product',
                 },
@@ -238,7 +238,7 @@
                     const response = await this.$services.Category.store(this.newCategory);
                     this.newCategory.name = '';
                     this.newCategory.slug = '';
-                    this.newCategory.category_id = '';
+                    this.newCategory.parent_id = '';
                     this.newCategory.keywords = ''
                     this.$refs.form.reset();
                     // Message({
@@ -261,7 +261,7 @@
                         this.categoryStore();
                     }
                 });
-		    },
+		},
             async destroy(id) {
                 try {
                     await this.$services.Category.delete(id);

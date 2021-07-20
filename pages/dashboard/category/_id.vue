@@ -1,5 +1,5 @@
 <template>
-    <div class="w-2/4 px-4">
+    <div class="px-4">
         <h1 class="my-2 text-[24px]">Chỉnh sửa danh mục</h1>
         <div class="w-full p-4 border-l-4 border-green-500 bg-white shadow-md text-[12px]" v-show="isShowNotificationMessage">
             <h2 class="my-2">Danh mục đã được cập nhật</h2>

@@ -123,10 +123,10 @@ export default {
 				await this.$auth.loginWith('laravelJWT', {
 					data: this.credentials
 				});
-				Message({
-					message: 'Đăng nhập thành công',
-					type: 'success'
-				});
+				// Message({
+				// 	message: 'Đăng nhập thành công',
+				// 	type: 'success'
+				// });
 			
 				setTimeout(_=> {
 					this.$router.push({
@@ -134,10 +134,10 @@ export default {
 					});
 				}, 2000); //MS
 			} catch (error) {
-				Message({
-					message: error.response.data.error,
-					type: 'error'
-				});
+				// Message({
+				// 	message: error.response.data.error,
+				// 	type: 'error'
+				// });
 			}
 		},
 

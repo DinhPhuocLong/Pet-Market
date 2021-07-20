@@ -33,7 +33,7 @@
     "description": "Auto imported from components/Pagination.vue"
   },
   "ProductCarousel": {
-    "description": "Auto imported from components/productCarousel.vue"
+    "description": "Auto imported from components/ProductCarousel.vue"
   },
   "ProductDetailHeader": {
     "description": "Auto imported from components/ProductDetailHeader.vue"
@@ -61,6 +61,15 @@
   },
   "DashboardSideBar": {
     "description": "Auto imported from components/dashboard/SideBar.vue"
+  },
+  "UIcomponentsAlert": {
+    "description": "Auto imported from components/UIcomponents/Alert.vue"
+  },
+  "UIcomponentsModal": {
+    "description": "Auto imported from components/UIcomponents/Modal.vue"
+  },
+  "UIcomponentsSlideOver": {
+    "description": "Auto imported from components/UIcomponents/SlideOver.vue"
   },
   "DashboardCategoryFormAdd": {
     "description": "Auto imported from components/dashboard/category/FormAdd.vue"

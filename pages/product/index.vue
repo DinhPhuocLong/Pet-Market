@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div class="flex mt-10 w-[94%] max-w-[1440px] xl:w-11/12 mx-auto">
+    <div class="flex mt-10 w-[94%] max-w-[1440px] xl:w-11/12 mx-auto">
         <div class="hidden lg:block w-1/4">
             <div class="border-b border-solid border-gray-200">
                 <h3 class="text-2xl font-bold pb-3">Nhóm Giá</h3>
@@ -990,6 +990,7 @@
                 </div>
             </div>
         </div>
+        <DashboardProductAdd />
     </div>
 
     <div class="mx-auto px-4 mt-20">
@@ -1026,7 +1027,7 @@
             </a>
         </nav>
     </div>
-  </div>
+</div>
 </template>
 
 <script>

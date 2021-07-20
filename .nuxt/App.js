@@ -8,6 +8,12 @@ import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import '..\\node_modules\\@nuxtjs\\tailwindcss\\dist\\runtime\\tailwind.css'
 
+import '..\\node_modules\\quill\\dist\\quill.snow.css'
+
+import '..\\node_modules\\quill\\dist\\quill.bubble.css'
+
+import '..\\node_modules\\quill\\dist\\quill.core.css'
+
 import _771842db from '..\\layouts\\blogs.vue'
 import _4c0f576a from '..\\layouts\\contact.vue'
 import _5fa3735e from '..\\layouts\\dashboard.vue'
