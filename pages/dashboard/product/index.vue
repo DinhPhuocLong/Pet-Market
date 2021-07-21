@@ -53,7 +53,7 @@
                         name="currency"
                         class="w-full border border-solid border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 h-full py-2 pl-2 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm"
                     >
-                        <option v-for="brand in brands" :key="brand.id" class="py-2">{{ brand.name }}</option>
+                        <option v-for="brand in brands" :value="brand.id" :key="brand.id" class="py-2">{{ brand.name }}</option>
                     </select>
                 </div>
 
