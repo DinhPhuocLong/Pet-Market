@@ -24,7 +24,7 @@ export { default as DashboardSideBar } from '../..\\components\\dashboard\\SideB
 export { default as UIcomponentsAlert } from '../..\\components\\UIcomponents\\Alert.vue'
 export { default as UIcomponentsModal } from '../..\\components\\UIcomponents\\Modal.vue'
 export { default as UIcomponentsSlideOver } from '../..\\components\\UIcomponents\\SlideOver.vue'
-export { default as DashboardCategoryFormAdd } from '../..\\components\\dashboard\\category\\FormAdd.vue'
+export { default as DashboardCategoryShow } from '../..\\components\\dashboard\\category\\Show.vue'
 
 export const LazyBanner = import('../..\\components\\Banner.vue' /* webpackChunkName: "components/banner" */).then(c => wrapFunctional(c.default || c))
 export const LazyBestDealSlider = import('../..\\components\\BestDealSlider.vue' /* webpackChunkName: "components/best-deal-slider" */).then(c => wrapFunctional(c.default || c))
@@ -50,4 +50,4 @@ export const LazyDashboardSideBar = import('../..\\components\\dashboard\\SideBa
 export const LazyUIcomponentsAlert = import('../..\\components\\UIcomponents\\Alert.vue' /* webpackChunkName: "components/u-icomponents-alert" */).then(c => wrapFunctional(c.default || c))
 export const LazyUIcomponentsModal = import('../..\\components\\UIcomponents\\Modal.vue' /* webpackChunkName: "components/u-icomponents-modal" */).then(c => wrapFunctional(c.default || c))
 export const LazyUIcomponentsSlideOver = import('../..\\components\\UIcomponents\\SlideOver.vue' /* webpackChunkName: "components/u-icomponents-slide-over" */).then(c => wrapFunctional(c.default || c))
-export const LazyDashboardCategoryFormAdd = import('../..\\components\\dashboard\\category\\FormAdd.vue' /* webpackChunkName: "components/dashboard-category-form-add" */).then(c => wrapFunctional(c.default || c))
+export const LazyDashboardCategoryShow = import('../..\\components\\dashboard\\category\\Show.vue' /* webpackChunkName: "components/dashboard-category-show" */).then(c => wrapFunctional(c.default || c))

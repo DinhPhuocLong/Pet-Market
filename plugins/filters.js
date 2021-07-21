@@ -7,13 +7,6 @@ Vue.filter('formatDate', function(value) {
     }
 });
 
-// Vue.filter('formatVndCurrency', function(value) {
-//     if (value) {
-//         let val = (value/1).toFixed(2).replace('.', ',')
-//         return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-//     }
-// });
-
 Vue.filter('toVndCurrency', function (value) {
     if (typeof value !== "number") {
         return value;
@@ -24,4 +17,12 @@ Vue.filter('toVndCurrency', function (value) {
         minimumFractionDigits: 0
     });
     return formatter.format(value);
+});
+
+
+Vue.filter('percentage', function (value) {
+    if(!value) {
+        return '0%';
+    }
+    return `${value}%`;
 });

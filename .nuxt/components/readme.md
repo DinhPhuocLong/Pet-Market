@@ -30,4 +30,4 @@ You can directly use them in pages and other components without the need to impo
 - `<UIcomponentsAlert>` | `<u-icomponents-alert>` (components/UIcomponents/Alert.vue)
 - `<UIcomponentsModal>` | `<u-icomponents-modal>` (components/UIcomponents/Modal.vue)
 - `<UIcomponentsSlideOver>` | `<u-icomponents-slide-over>` (components/UIcomponents/SlideOver.vue)
-- `<DashboardCategoryFormAdd>` | `<dashboard-category-form-add>` (components/dashboard/category/FormAdd.vue)
+- `<DashboardCategoryShow>` | `<dashboard-category-show>` (components/dashboard/category/Show.vue)

@@ -316,7 +316,7 @@
 
                         <td class="px-5 py-5 border-b border-gray-200 text-sm">
                             <p class="text-gray-900 whitespace-no-wrap">
-                                {{ product.sale }}%
+                                {{ product.sale | percentage }}
                             </p>
                         </td>
 
@@ -379,34 +379,34 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-import util from "../../../helpers/util";
+import { mapState, mapActions } from 'vuex';
+import util from '../../../helpers/util';
 export default {
-    layout: "dashboard",
+    layout: 'dashboard',
     data() {
         return {
             isShowingSlideOver: false,
             editorOption: {
-                placeholder: "Vui lòng nhập gì đó",
+                placeholder: 'Vui lòng nhập gì đó',
                 modules: {
                     toolbar: [
-                        ["bold", "italic", "underline", "strike"],
-                        ["blockquote", "code-block"]
+                        ['bold', 'italic', 'underline', 'strike'],
+                        ['blockquote', 'code-block']
                     ]
                 }
             },
-            files: "",
+            files: '',
             images: [],
-            name: "",
-            category_id: "",
-            price: "",
-            salePrice: "",
-            content: ""
+            name: '',
+            category_id: '',
+            price: '',
+            salePrice: '',
+            content: ''
         };
     },
-    async created() {
-        await this.$store.dispatch("product/getProducts");
-        await this.$store.dispatch("category/getCategory");
+    created() {
+        this.$store.dispatch('product/getProducts');
+        this.$store.dispatch('category/getCategory', 'product');
     },
     computed: {
         ...mapState({
@@ -419,7 +419,7 @@ export default {
         }),
         categoryOptions() {
             const tree = this.categories;
-            return util.recursiveCategory(tree, "&nbsp;&nbsp;");
+            return util.recursiveCategory(tree, '&nbsp;&nbsp;');
         }
     },
     methods: {
@@ -427,7 +427,7 @@ export default {
             try {
                 const formData = new FormData();
                 this.files.forEach(file => {
-                    formData.append("src[]", file);
+                    formData.append('src[]', file);
                 });
                 formData.append('slug', '');
                 formData.append('name', this.name);
@@ -466,9 +466,9 @@ export default {
         },
         status(status) {
             if (!status) {
-                return "Hiện";
+                return 'Hiện';
             }
-            return "Ẩn";
+            return 'Ẩn';
         },
         openSlideOver() {
             this.isShowingSlideOver = true;
@@ -477,16 +477,16 @@ export default {
             this.isShowingSlideOver = false;
         },
         onEditorBlur(editor) {
-            console.log("editor blur!", editor);
+            // console.log("editor blur!", editor);
         },
         onEditorFocus(editor) {
-            console.log("editor focus!", editor);
+            // console.log("editor focus!", editor);
         },
         onEditorReady(editor) {
-            console.log("editor ready!", editor);
+            // console.log("editor ready!", editor);
         },
         onEditorChange({ editor, html, text }) {
-            console.log("editor change!", editor, html, text);
+            // console.log("editor change!", editor, html, text);
             this.content = html;
         }
     }

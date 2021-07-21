@@ -1,33 +1,49 @@
 <template>
-    <DashboardCategoryFormAdd  :category="category"  v-on:refresh-data="refreshTableData();"/>
+    <DashboardCategoryShow
+        :category="category"
+        :title="title"
+        v-on:refresh-data="refreshTableData()"
+    />
 </template>
 
 <script>
 import { mapState } from 'vuex';
-    export default {
-        layout: 'dashboard',
-        async fetch({ store }) {
-            await store.dispatch('category/getCategory');
-        },
-        computed: {
-            ...mapState({
-                category: (state) => {
-                    return state.category.category;
-                }
-            }),
-        },
-        methods: {
-            async refreshTableData() {
-                await this.$store.dispatch('category/getCategory');
-            },
-
-            console() {
-                console.log('console.log');
-            }
+export default {
+    layout: 'dashboard',
+    data() {
+        return {
+            title: this.$route.query.type || ''
         }
+    },
+    created() {
+        const type = this.$route.query.type || '';
+        this.getCategory(type);
+    },
+    watch: {
+        $route(to, from) {
+            const type = this.$route.query.type || '';
+            this.title = type;
+            
+            
+            this.getCategory(type);
+        }
+    },
+    computed: {
+        ...mapState({
+            category: state => {
+                return state.category.category;
+            }
+        })
+    },
+    methods: {
+        getCategory(type) {
+            this.$store.dispatch('category/getCategory', type);
+        },
+        refreshTableData() {
+            this.$store.dispatch('category/getCategory');
+        },
     }
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

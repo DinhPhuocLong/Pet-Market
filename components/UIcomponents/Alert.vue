@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-4 border-l-4 rounded px-4 py-3 bg-gray-100">
+    <div class="mb-4 border-l-4 rounded px-4 py-3 bg-gray-100" v-if="visible">
         <div class="flex items-start">
             <div class="py-1">
                 <svg
@@ -13,14 +13,23 @@
                 </svg>
             </div>
 
-            <div>
-                <h3 class="font-semibold">Info Message</h3>
+            <div>  
+                <h3 class="font-semibold">{{ title }}</h3>
 
                 <p class="text-sm text-gray-800">
-                    Sed ut perspiciatis unde omnis iste natus danger sit
-                    voluptatem accusantium doloremque laudantium, totam rem.
+                    {{ message }}
                 </p>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    props: ['message', 'title', 'visible'],
+}
+</script>
+
+<style>
+
+</style>

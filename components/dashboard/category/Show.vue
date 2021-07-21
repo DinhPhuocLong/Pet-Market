@@ -1,6 +1,6 @@
 <template>
     <div class="font-nunito">
-        <h1 class="text-3xl font-bold">Danh mục sản phẩm</h1>
+        <h1 class="text-3xl font-bold">{{ categoryTitle }}</h1>
         <div class="w-full xl:flex mt-10">
             <div class="xl:w-1/4">
                 <h2 class="text-lg font-semibold">Thêm danh mục</h2>
@@ -60,16 +60,6 @@
                                 >
                                     
                                 </option>
-                        </select>
-                    </div>
-
-                    <div class="mb-8">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-                            Loại danh mục
-                        </label>
-                        <select class="py-1 px-2" v-model="newCategory.type">
-                            <option class="" value="product">Danh mục sản phẩm</option>
-                            <option class="" value="blog">Danh mục bài viết</option>
                         </select>
                     </div>
 
@@ -186,7 +176,7 @@
     import util from '../../../helpers/util';
     import { ValidationProvider, ValidationObserver } from "vee-validate";
     export default {
-        props: ['category'],
+        props: ['category', 'title'],
         components: {
             ValidationProvider,
             ValidationObserver
@@ -208,6 +198,11 @@
             }
         },
         computed: {
+            categoryTitle() {
+                if (!this.title) return 'Tất cả danh mục';
+                if (this.title == 'blog') return 'Danh mục tin tức';
+                if (this.title == 'product') return 'Danh mục sản phẩm';
+            },
             isDisabled() {
                 if (this.tableAction == -1) {
                     return true;
@@ -215,6 +210,9 @@
                 return false;
             },
             selectOptions() {
+                if (this.category.length) {
+                    
+                }
                 const tree = this.category;
                 return util.recursiveCategory(tree, '&nbsp;&nbsp;');
             },

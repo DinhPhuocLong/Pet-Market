@@ -26,7 +26,7 @@ const components = {
   UIcomponentsAlert: () => import('../..\\components\\UIcomponents\\Alert.vue' /* webpackChunkName: "components/u-icomponents-alert" */).then(c => wrapFunctional(c.default || c)),
   UIcomponentsModal: () => import('../..\\components\\UIcomponents\\Modal.vue' /* webpackChunkName: "components/u-icomponents-modal" */).then(c => wrapFunctional(c.default || c)),
   UIcomponentsSlideOver: () => import('../..\\components\\UIcomponents\\SlideOver.vue' /* webpackChunkName: "components/u-icomponents-slide-over" */).then(c => wrapFunctional(c.default || c)),
-  DashboardCategoryFormAdd: () => import('../..\\components\\dashboard\\category\\FormAdd.vue' /* webpackChunkName: "components/dashboard-category-form-add" */).then(c => wrapFunctional(c.default || c))
+  DashboardCategoryShow: () => import('../..\\components\\dashboard\\category\\Show.vue' /* webpackChunkName: "components/dashboard-category-show" */).then(c => wrapFunctional(c.default || c))
 }
 
 for (const name in components) {

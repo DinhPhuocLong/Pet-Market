@@ -1,8 +1,15 @@
 const resource = process.env.BASE_URL + '/category';
 export default ($axios) => ({
-    all() {
-        console.log(process.env.BASE_URL);
-        return $axios.get(resource);
+    all(type) {
+        let params = {};
+        if (type) {
+            params = {
+                type
+            }
+        }
+        return $axios.get(resource, {
+            params
+        });
     },
     store(payload) {
         return $axios.post(resource, payload);

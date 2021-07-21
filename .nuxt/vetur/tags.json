@@ -71,7 +71,7 @@
   "UIcomponentsSlideOver": {
     "description": "Auto imported from components/UIcomponents/SlideOver.vue"
   },
-  "DashboardCategoryFormAdd": {
-    "description": "Auto imported from components/dashboard/category/FormAdd.vue"
+  "DashboardCategoryShow": {
+    "description": "Auto imported from components/dashboard/category/Show.vue"
   }
 }
