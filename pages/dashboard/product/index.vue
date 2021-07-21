@@ -48,7 +48,7 @@
 
                 <div class="mb-8">
                     <label class="block mb-4">Thương hiệu</label>
-                    <select
+                    <select v-model="brand"
                         id="Currency"
                         name="currency"
                         class="w-full border border-solid border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 h-full py-2 pl-2 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm"
@@ -405,6 +405,7 @@ export default {
             price: '',
             salePrice: '',
             content: '',
+            brand: '',
             brands: [],
         };
     },
@@ -443,6 +444,7 @@ export default {
                 formData.append('price', this.price);
                 formData.append('description', this.content);
                 formData.append('category_id', this.category_id);
+                formData.append('brand_id', this.brand);
                 await this.$services.Product.store(formData);
                 this.files = '';
                 this.name = '';
