@@ -31,21 +31,6 @@
                             v-model="newCategory.slug">
                     </div>
 
-
-                    <div class="mb-8">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-                            Từ khoá
-                        </label>
-                        <ValidationProvider rules="required" :custom-messages="customErrorMessages.name" v-slot="{ errors }">
-                        <input
-                            class="appearance-none border border-black  rounded w-full py-1.5 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            v-model="newCategory.keywords"
-                            :class="{ 'border-red-600': errors[0] }"
-                            >
-                            <p class="mt-1 text-sm italic text-red-500">{{ errors[0] }}</p>
-                        </ValidationProvider>
-                    </div>
-
                     <div class="mb-8">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
                             Danh mục cha
@@ -188,7 +173,6 @@
                     name: '',
                     slug: '',
                     parent_id: '',
-                    keywords: '',
                     type: 'product',
                 },
                 customErrorMessages: {
@@ -222,9 +206,6 @@
             }
         },
         methods: {
-            click() {
-                console.log(this.selectOptions);
-            },
             status(status) {
                 if (status) {
                     return "Ẩn";
@@ -259,7 +240,7 @@
                         this.categoryStore();
                     }
                 });
-		},
+		    },
             async destroy(id) {
                 try {
                     await this.$services.Category.delete(id);

@@ -33,6 +33,7 @@
                     <select
                         id="Currency"
                         name="currency"
+                        v-model="category_id"
                         class="w-full border border-solid border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 h-full py-2 pl-2 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm"
                     >
                         <option
@@ -52,7 +53,7 @@
                         name="currency"
                         class="w-full border border-solid border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 h-full py-2 pl-2 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm"
                     >
-                        <option class="py-2">Brand 1</option>
+                        <option v-for="brand in brands" :key="brand.id" class="py-2">{{ brand.name }}</option>
                     </select>
                 </div>
 
@@ -301,7 +302,9 @@
                             </p>
                         </td>
                         <td class="px-5 py-5 border-b border-gray-200 text-sm">
-                            <p class="text-gray-900 whitespace-no-wrap"></p>
+                            <p class="text-gray-900 whitespace-no-wrap">
+                                {{ product.category ? product.category.name : '' }}
+                            </p>
                         </td>
 
                         <td class="px-5 py-5 border-b border-gray-200 text-sm">
@@ -379,7 +382,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState } from 'vuex';
 import util from '../../../helpers/util';
 export default {
     layout: 'dashboard',
@@ -401,12 +404,14 @@ export default {
             category_id: '',
             price: '',
             salePrice: '',
-            content: ''
+            content: '',
+            brands: [],
         };
     },
-    created() {
+    async created() {
         this.$store.dispatch('product/getProducts');
         this.$store.dispatch('category/getCategory', 'product');
+        this.getBrand();
     },
     computed: {
         ...mapState({
@@ -423,6 +428,10 @@ export default {
         }
     },
     methods: {
+        async getBrand() {
+            const response = await this.$services.Brand.all();
+            this.brands = response.data;
+        },
         async addNewProduct() {
             try {
                 const formData = new FormData();
@@ -439,6 +448,8 @@ export default {
                 this.name = '';
                 this.category_id = '';
                 this.content = '';
+                this.images = '';
+                this.$store.dispatch('product/getProducts');
             } catch (error) {
                 console.log(error);
             }

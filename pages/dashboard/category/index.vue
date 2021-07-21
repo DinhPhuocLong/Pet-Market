@@ -23,8 +23,6 @@ export default {
         $route(to, from) {
             const type = this.$route.query.type || '';
             this.title = type;
-            
-            
             this.getCategory(type);
         }
     },
@@ -40,7 +38,7 @@ export default {
             this.$store.dispatch('category/getCategory', type);
         },
         refreshTableData() {
-            this.$store.dispatch('category/getCategory');
+            this.$store.dispatch('category/getCategory', this.type);
         },
     }
 };
