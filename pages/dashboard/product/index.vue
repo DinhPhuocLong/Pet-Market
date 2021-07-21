@@ -48,12 +48,19 @@
 
                 <div class="mb-8">
                     <label class="block mb-4">Thương hiệu</label>
-                    <select v-model="brand"
+                    <select
+                        v-model="brand"
                         id="Currency"
                         name="currency"
                         class="w-full border border-solid border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 h-full py-2 pl-2 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm"
                     >
-                        <option v-for="brand in brands" :value="brand.id" :key="brand.id" class="py-2">{{ brand.name }}</option>
+                        <option
+                            v-for="brand in brands"
+                            :value="brand.id"
+                            :key="brand.id"
+                            class="py-2"
+                            >{{ brand.name }}</option
+                        >
                     </select>
                 </div>
 
@@ -124,6 +131,7 @@
                             type="file"
                             class="h-full w-full opacity-0"
                             name=""
+                            multiple
                             @change="onFileChange"
                         />
                     </div>
@@ -303,7 +311,11 @@
                         </td>
                         <td class="px-5 py-5 border-b border-gray-200 text-sm">
                             <p class="text-gray-900 whitespace-no-wrap">
-                                {{ product.category ? product.category.name : '' }}
+                                {{
+                                    product.category
+                                        ? product.category.name
+                                        : ''
+                                }}
                             </p>
                         </td>
 
@@ -406,7 +418,7 @@ export default {
             salePrice: '',
             content: '',
             brand: '',
-            brands: [],
+            brands: []
         };
     },
     async created() {
@@ -436,9 +448,14 @@ export default {
         async addNewProduct() {
             try {
                 const formData = new FormData();
+                // for (var i = 0; i < this.files.length; i++) {
+                //     let file = this.files[i];
+                //     formData.append('files[' + i + ']', file);
+                // }
                 this.files.forEach(file => {
                     formData.append('src[]', file);
                 });
+                console.log(formData);
                 formData.append('slug', '');
                 formData.append('name', this.name);
                 formData.append('price', this.price);
@@ -450,7 +467,7 @@ export default {
                 this.name = '';
                 this.category_id = '';
                 this.content = '';
-                this.images = '';
+                this.images = [];
                 this.$store.dispatch('product/getProducts');
             } catch (error) {
                 console.log(error);
