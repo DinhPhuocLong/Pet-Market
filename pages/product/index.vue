@@ -990,7 +990,6 @@
                 </div>
             </div>
         </div>
-        <DashboardProductAdd />
     </div>
 
     <div class="mx-auto px-4 mt-20">

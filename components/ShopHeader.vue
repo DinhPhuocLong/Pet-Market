@@ -6,14 +6,14 @@
                 <div class="flex items-center justify-between">
                     <div class="flex items-center flex-grow">
                         <!-- logo -->
-                        <a href="#"
+                        <nuxt-link to="/" href="#"
                             ><img
                                 class="max-h-11 pr-10"
                                 src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2021/03/logo.png"
                                 alt="logo"
-                        /></a>
+                        /></nuxt-link>
 
-                        <DropdownMenu />
+                        <DropdownMenu :category="category" />
                     </div>
 
                     <!-- icon right -->
@@ -105,10 +105,23 @@
             </div>
         </div>
 
-        <Breadcum />
+        <Breadcrumbs />
     </div>
 </template>
+<script>
+import { mapState } from 'vuex';
+export default {
+    computed: {
+        ...mapState({
+            category: state => {
+                return state.category.category;
+            }
+        }),
+    }
+};
+</script>
 
+<style></style>
 <style scoped>
 .nav-color {
     background-color: #ed6436 !important;

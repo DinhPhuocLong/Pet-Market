@@ -11,8 +11,8 @@
   "BlogSidebar": {
     "description": "Auto imported from components/BlogSidebar.vue"
   },
-  "Breadcum": {
-    "description": "Auto imported from components/Breadcum.vue"
+  "Breadcrumbs": {
+    "description": "Auto imported from components/Breadcrumbs.vue"
   },
   "CommentForm": {
     "description": "Auto imported from components/CommentForm.vue"
@@ -46,6 +46,12 @@
   },
   "SmallBanner": {
     "description": "Auto imported from components/SmallBanner.vue"
+  },
+  "SubMenu": {
+    "description": "Auto imported from components/SubMenu.vue"
+  },
+  "SubMenuItem": {
+    "description": "Auto imported from components/SubMenuItem.vue"
   },
   "Tag": {
     "description": "Auto imported from components/Tag.vue"

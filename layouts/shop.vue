@@ -12,7 +12,20 @@
     <Footer />
   </div>
 </template>
+      
+<script>
+export default {
+  async fetch() {
+    if (!this.$store.state.category.category.length) {
+        await this.$store.dispatch('category/getCategory');
+    }
+  }
+}
+</script>
 
+<style>
+
+</style>
 <style scoped>
   .nav-color {
     background-color: #ed6436 !important;

@@ -4,7 +4,7 @@ export { default as Banner } from '../..\\components\\Banner.vue'
 export { default as BestDealSlider } from '../..\\components\\BestDealSlider.vue'
 export { default as Blog } from '../..\\components\\Blog.vue'
 export { default as BlogSidebar } from '../..\\components\\BlogSidebar.vue'
-export { default as Breadcum } from '../..\\components\\Breadcum.vue'
+export { default as Breadcrumbs } from '../..\\components\\Breadcrumbs.vue'
 export { default as CommentForm } from '../..\\components\\CommentForm.vue'
 export { default as DropdownMenu } from '../..\\components\\DropdownMenu.vue'
 export { default as Footer } from '../..\\components\\Footer.vue'
@@ -16,6 +16,8 @@ export { default as ProductDetailHeader } from '../..\\components\\ProductDetail
 export { default as Search } from '../..\\components\\Search.vue'
 export { default as ShopHeader } from '../..\\components\\ShopHeader.vue'
 export { default as SmallBanner } from '../..\\components\\SmallBanner.vue'
+export { default as SubMenu } from '../..\\components\\SubMenu.vue'
+export { default as SubMenuItem } from '../..\\components\\SubMenuItem.vue'
 export { default as Tag } from '../..\\components\\Tag.vue'
 export { default as TopBrandSlider } from '../..\\components\\TopBrandSlider.vue'
 export { default as TrendingProduct } from '../..\\components\\TrendingProduct.vue'
@@ -30,7 +32,7 @@ export const LazyBanner = import('../..\\components\\Banner.vue' /* webpackChunk
 export const LazyBestDealSlider = import('../..\\components\\BestDealSlider.vue' /* webpackChunkName: "components/best-deal-slider" */).then(c => wrapFunctional(c.default || c))
 export const LazyBlog = import('../..\\components\\Blog.vue' /* webpackChunkName: "components/blog" */).then(c => wrapFunctional(c.default || c))
 export const LazyBlogSidebar = import('../..\\components\\BlogSidebar.vue' /* webpackChunkName: "components/blog-sidebar" */).then(c => wrapFunctional(c.default || c))
-export const LazyBreadcum = import('../..\\components\\Breadcum.vue' /* webpackChunkName: "components/breadcum" */).then(c => wrapFunctional(c.default || c))
+export const LazyBreadcrumbs = import('../..\\components\\Breadcrumbs.vue' /* webpackChunkName: "components/breadcrumbs" */).then(c => wrapFunctional(c.default || c))
 export const LazyCommentForm = import('../..\\components\\CommentForm.vue' /* webpackChunkName: "components/comment-form" */).then(c => wrapFunctional(c.default || c))
 export const LazyDropdownMenu = import('../..\\components\\DropdownMenu.vue' /* webpackChunkName: "components/dropdown-menu" */).then(c => wrapFunctional(c.default || c))
 export const LazyFooter = import('../..\\components\\Footer.vue' /* webpackChunkName: "components/footer" */).then(c => wrapFunctional(c.default || c))
@@ -42,6 +44,8 @@ export const LazyProductDetailHeader = import('../..\\components\\ProductDetailH
 export const LazySearch = import('../..\\components\\Search.vue' /* webpackChunkName: "components/search" */).then(c => wrapFunctional(c.default || c))
 export const LazyShopHeader = import('../..\\components\\ShopHeader.vue' /* webpackChunkName: "components/shop-header" */).then(c => wrapFunctional(c.default || c))
 export const LazySmallBanner = import('../..\\components\\SmallBanner.vue' /* webpackChunkName: "components/small-banner" */).then(c => wrapFunctional(c.default || c))
+export const LazySubMenu = import('../..\\components\\SubMenu.vue' /* webpackChunkName: "components/sub-menu" */).then(c => wrapFunctional(c.default || c))
+export const LazySubMenuItem = import('../..\\components\\SubMenuItem.vue' /* webpackChunkName: "components/sub-menu-item" */).then(c => wrapFunctional(c.default || c))
 export const LazyTag = import('../..\\components\\Tag.vue' /* webpackChunkName: "components/tag" */).then(c => wrapFunctional(c.default || c))
 export const LazyTopBrandSlider = import('../..\\components\\TopBrandSlider.vue' /* webpackChunkName: "components/top-brand-slider" */).then(c => wrapFunctional(c.default || c))
 export const LazyTrendingProduct = import('../..\\components\\TrendingProduct.vue' /* webpackChunkName: "components/trending-product" */).then(c => wrapFunctional(c.default || c))

@@ -24,5 +24,5 @@ Vue.filter('percentage', function (value) {
     if(!value) {
         return '0%';
     }
-    return `${value}%`;
+    return `${+value}%`;
 });

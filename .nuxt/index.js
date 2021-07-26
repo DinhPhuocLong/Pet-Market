@@ -19,7 +19,7 @@ import nuxt_plugin_quill_1080d657 from 'nuxt_plugin_quill_1080d657' // Source: .
 import nuxt_plugin_services_66cd5d34 from 'nuxt_plugin_services_66cd5d34' // Source: ..\\plugins\\services.js (mode: 'all')
 import nuxt_plugin_veevalidate_4ef50776 from 'nuxt_plugin_veevalidate_4ef50776' // Source: ..\\plugins\\vee-validate.js (mode: 'all')
 import nuxt_plugin_filters_57ec6061 from 'nuxt_plugin_filters_57ec6061' // Source: ..\\plugins\\filters.js (mode: 'all')
-import nuxt_plugin_owl_7562b290 from 'nuxt_plugin_owl_7562b290' // Source: ..\\plugins\\owl.js (mode: 'client')
+import nuxt_plugin_uikit_387dd07a from 'nuxt_plugin_uikit_387dd07a' // Source: ..\\plugins\\uikit.js (mode: 'client')
 import nuxt_plugin_auth_6f479f60 from 'nuxt_plugin_auth_6f479f60' // Source: .\\auth.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -88,7 +88,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Pet-Market","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss2?family=Nunito&display=swap"}],"style":[],"script":[]},
+    head: {"title":"Pet-Market","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss2?family=Nunito&display=swap"},{"rel":"stylesheet","href":"\u002Fuikit-core.min.css"}],"style":[],"script":[]},
 
     store,
     router,
@@ -241,8 +241,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_filters_57ec6061(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_owl_7562b290 === 'function') {
-    await nuxt_plugin_owl_7562b290(app.context, inject)
+  if (process.client && typeof nuxt_plugin_uikit_387dd07a === 'function') {
+    await nuxt_plugin_uikit_387dd07a(app.context, inject)
   }
 
   if (typeof nuxt_plugin_auth_6f479f60 === 'function') {

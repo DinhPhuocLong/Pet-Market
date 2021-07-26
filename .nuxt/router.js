@@ -4,21 +4,22 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _e1d79e88 = () => interopDefault(import('..\\pages\\404.vue' /* webpackChunkName: "pages/404.vue" */))
-const _3e80a856 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index.vue" */))
-const _781be7b3 = () => interopDefault(import('..\\pages\\blog\\blogs.vue' /* webpackChunkName: "pages/blogs.vue" */))
-const _0afee1ac = () => interopDefault(import('..\\pages\\blog\\_slug.vue' /* webpackChunkName: "pages/blogs.vue" */))
-const _db6efcb8 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact.vue" */))
-const _eadf732c = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index.vue" */))
-const _27fa032c = () => interopDefault(import('..\\pages\\dashboard\\category\\index.vue' /* webpackChunkName: "pages/dashboard/category/index.vue" */))
-const _6e46e094 = () => interopDefault(import('..\\pages\\dashboard\\category\\_id.vue' /* webpackChunkName: "pages/dashboard/category/_id.vue" */))
-const _30490aca = () => interopDefault(import('..\\pages\\dashboard\\product\\index.vue' /* webpackChunkName: "pages/dashboard/product/index.vue" */))
-const _6ad56d03 = () => interopDefault(import('..\\pages\\dashboard\\brand\\index.vue' /* webpackChunkName: "pages/dashboard/brand/index.vue" */))
-const _285e57aa = () => interopDefault(import('..\\pages\\dashboard\\brand\\_id.vue' /* webpackChunkName: "pages/dashboard/brand/_id.vue" */))
-const _ad06fba2 = () => interopDefault(import('..\\pages\\product\\index.vue' /* webpackChunkName: "pages/product/index.vue" */))
-const _b0743e32 = () => interopDefault(import('..\\pages\\product\\_slug.vue' /* webpackChunkName: "pages/product/_slug.vue" */))
-const _5437e981 = () => interopDefault(import('..\\pages\\dashboard\\login.vue' /* webpackChunkName: "pages/dashboard/login.vue" */))
-const _54df33bb = () => interopDefault(import('..\\pages\\dashboard\\register.vue' /* webpackChunkName: "pages/dashboard/register.vue" */))
+const _e1d79e88 = () => interopDefault(import('..\\pages\\404.vue' /* webpackChunkName: "pages/404" */))
+const _db6efcb8 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
+const _eadf732c = () => interopDefault(import('..\\pages\\dashboard\\index.vue' /* webpackChunkName: "pages/dashboard/index" */))
+const _ad06fba2 = () => interopDefault(import('..\\pages\\product\\index.vue' /* webpackChunkName: "pages/product/index" */))
+const _781be7b3 = () => interopDefault(import('..\\pages\\blog\\blogs.vue' /* webpackChunkName: "pages/blog/blogs" */))
+const _6ad56d03 = () => interopDefault(import('..\\pages\\dashboard\\brand\\index.vue' /* webpackChunkName: "pages/dashboard/brand/index" */))
+const _27fa032c = () => interopDefault(import('..\\pages\\dashboard\\category\\index.vue' /* webpackChunkName: "pages/dashboard/category/index" */))
+const _5437e981 = () => interopDefault(import('..\\pages\\dashboard\\login.vue' /* webpackChunkName: "pages/dashboard/login" */))
+const _30490aca = () => interopDefault(import('..\\pages\\dashboard\\product\\index.vue' /* webpackChunkName: "pages/dashboard/product/index" */))
+const _54df33bb = () => interopDefault(import('..\\pages\\dashboard\\register.vue' /* webpackChunkName: "pages/dashboard/register" */))
+const _285e57aa = () => interopDefault(import('..\\pages\\dashboard\\brand\\_id.vue' /* webpackChunkName: "pages/dashboard/brand/_id" */))
+const _6e46e094 = () => interopDefault(import('..\\pages\\dashboard\\category\\_id.vue' /* webpackChunkName: "pages/dashboard/category/_id" */))
+const _6dad67c3 = () => interopDefault(import('..\\pages\\dashboard\\product\\_id.vue' /* webpackChunkName: "pages/dashboard/product/_id" */))
+const _0afee1ac = () => interopDefault(import('..\\pages\\blog\\_slug.vue' /* webpackChunkName: "pages/blog/_slug" */))
+const _b0743e32 = () => interopDefault(import('..\\pages\\product\\_slug.vue' /* webpackChunkName: "pages/product/_slug" */))
+const _3e80a856 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -32,23 +33,11 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "*",
+    path: "/404",
     component: _e1d79e88,
     name: "404"
   }, {
-    path: "/",
-    component: _3e80a856,
-    name: "home-page"
-  }, {
-    path: "/tin-tuc",
-    component: _781be7b3,
-    name: "blog"
-  }, {
-    path: "/tin-tuc/:slug",
-    component: _0afee1ac,
-    name: "blog-detail"
-  }, {
-    path: "/lien-he",
+    path: "/contact",
     component: _db6efcb8,
     name: "contact"
   }, {
@@ -56,41 +45,57 @@ export const routerOptions = {
     component: _eadf732c,
     name: "dashboard"
   }, {
-    path: "/dashboard/category",
-    component: _27fa032c,
-    name: "category"
+    path: "/product",
+    component: _ad06fba2,
+    name: "product"
   }, {
-    path: "/dashboard/category/:id",
-    component: _6e46e094,
-    name: "category-id"
-  }, {
-    path: "/dashboard/product",
-    component: _30490aca,
-    name: "dashboard-product"
+    path: "/blog/blogs",
+    component: _781be7b3,
+    name: "blog-blogs"
   }, {
     path: "/dashboard/brand",
     component: _6ad56d03,
     name: "dashboard-brand"
   }, {
+    path: "/dashboard/category",
+    component: _27fa032c,
+    name: "dashboard-category"
+  }, {
+    path: "/dashboard/login",
+    component: _5437e981,
+    name: "dashboard-login"
+  }, {
+    path: "/dashboard/product",
+    component: _30490aca,
+    name: "dashboard-product"
+  }, {
+    path: "/dashboard/register",
+    component: _54df33bb,
+    name: "dashboard-register"
+  }, {
     path: "/dashboard/brand/:id",
     component: _285e57aa,
     name: "dashboard-brand-id"
   }, {
-    path: "/san-pham",
-    component: _ad06fba2,
-    name: "product"
+    path: "/dashboard/category/:id",
+    component: _6e46e094,
+    name: "dashboard-category-id"
   }, {
-    path: "/san-pham/:slug",
+    path: "/dashboard/product/:id",
+    component: _6dad67c3,
+    name: "dashboard-product-id"
+  }, {
+    path: "/blog/:slug?",
+    component: _0afee1ac,
+    name: "blog-slug"
+  }, {
+    path: "/product/:slug",
     component: _b0743e32,
-    name: "product-detail"
+    name: "product-slug"
   }, {
-    path: "/dashboard/dang-nhap",
-    component: _5437e981,
-    name: "login"
-  }, {
-    path: "/dashboard/dang-ky",
-    component: _54df33bb,
-    name: "register"
+    path: "/",
+    component: _3e80a856,
+    name: "index"
   }],
 
   fallback: false

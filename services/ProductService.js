@@ -3,6 +3,13 @@ export default ($axios) => ({
     all() {
         return $axios.get(resource);
     },
+    getSaleProduct() {
+        return $axios.get(resource, {
+            params: {
+                sale: true,
+            }
+        });
+    },
     store(payload) {
         return $axios.post(resource, payload, {
             headers: {

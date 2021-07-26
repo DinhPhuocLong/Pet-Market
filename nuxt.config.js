@@ -30,103 +30,23 @@ export default {
             {
                 rel: "stylesheet",
                 href: "https://fonts.googleapis.com/css2?family=Nunito&display=swap",
-            }
-        ]
+            },
+            {
+                rel: 'stylesheet',
+                href: '/uikit-core.min.css'
+            },
+        ],
+        // script: [{
+        //     type: 'module',
+        //     src: 'uikit.min.js',
+        //     ssr: false
+        // }],
+
     },
 
     router: {
         extendRoutes(routes, resolve) {
-            return [{
-                    name: '404',
-                    path: '*',
-                    component: resolve(__dirname, 'pages/404.vue'),
-                    chunkName: 'pages/404.vue'
-                },
-                {
-                    name: 'home-page',
-                    path: '/',
-                    component: resolve(__dirname, 'pages/index.vue'),
-                    chunkName: 'pages/index.vue',
-                },
-                {
-                    name: 'blog',
-                    path: '/tin-tuc',
-                    component: resolve(__dirname, 'pages/blog/blogs.vue'),
-                    chunkName: 'pages/blogs.vue'
-                },
-                {
-                    name: 'blog-detail',
-                    path: '/tin-tuc/:slug',
-                    component: resolve(__dirname, 'pages/blog/_slug.vue'),
-                    chunkName: 'pages/blogs.vue'
-                },
-                {
-                    name: 'contact',
-                    path: '/lien-he',
-                    component: resolve(__dirname, 'pages/contact.vue'),
-                    chunkName: 'pages/contact.vue'
-                },
-                {
-                    name: 'dashboard',
-                    path: '/dashboard',
-                    component: resolve(__dirname, 'pages/dashboard/index.vue'),
-                    chunkName: 'pages/dashboard/index.vue'
-                },
-                {
-                    name: 'category',
-                    path: '/dashboard/category',
-                    component: resolve(__dirname, 'pages/dashboard/category/index.vue'),
-                    chunkName: 'pages/dashboard/category/index.vue'
-                },
-                {
-                    name: 'category-id',
-                    path: '/dashboard/category/:id',
-                    component: resolve(__dirname, 'pages/dashboard/category/_id.vue'),
-                    chunkName: 'pages/dashboard/category/_id.vue'
-                },
-                {
-                    name: 'dashboard-product',
-                    path: '/dashboard/product',
-                    component: resolve(__dirname, 'pages/dashboard/product/index.vue'),
-                    chunkName: 'pages/dashboard/product/index.vue'
-                },
-                {
-                    name: 'dashboard-brand',
-                    path: '/dashboard/brand',
-                    component: resolve(__dirname, 'pages/dashboard/brand/index.vue'),
-                    chunkName: 'pages/dashboard/brand/index.vue'
-                },
-                {
-                    name: 'dashboard-brand-id',
-                    path: '/dashboard/brand/:id',
-                    component: resolve(__dirname, 'pages/dashboard/brand/_id.vue'),
-                    chunkName: 'pages/dashboard/brand/_id.vue'
-                },
-                {
-                    name: 'product',
-                    path: '/san-pham', // <--- change this
-                    component: resolve(__dirname, 'pages/product/index.vue'),
-                    chunkName: 'pages/product/index.vue'
-                },
-                {
-                    name: 'product-detail',
-                    path: '/san-pham/:slug', // <--- change this
-                    component: resolve(__dirname, 'pages/product/_slug.vue'),
-                    chunkName: 'pages/product/_slug.vue'
-                },
-                {
-                    name: 'login',
-                    path: '/dashboard/dang-nhap', // <--- change this
-                    component: resolve(__dirname, 'pages/dashboard/login.vue'),
-                    chunkName: 'pages/dashboard/login.vue'
-                },
-                {
-                    name: 'register',
-                    path: '/dashboard/dang-ky', // <--- change this
-                    component: resolve(__dirname, 'pages/dashboard/register.vue'),
-                    chunkName: 'pages/dashboard/register.vue'
-                },
-            ]
+
         }
     },
 
@@ -135,12 +55,11 @@ export default {
         // 1. Configure the css location of element-ui in css
         'quill/dist/quill.snow.css',
         'quill/dist/quill.bubble.css',
-        'quill/dist/quill.core.css'
+        'quill/dist/quill.core.css',
     ],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-    plugins: [
-        {
+    plugins: [{
             src: 'plugins/quill.js',
             ssr: false
         },
@@ -148,9 +67,9 @@ export default {
         'plugins/vee-validate.js',
         'plugins/filters.js',
         {
-            src: 'plugins/owl.js',
+            src: 'plugins/uikit.js',
             ssr: false
-        },
+        }
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -207,5 +126,5 @@ export default {
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
         transpile: ['vee-validate'],
-    }
+    },
 }

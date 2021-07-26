@@ -102,7 +102,7 @@
                 class="flex items-center justify-between nav-color rounded-full py-3"
             >
                 <!-- nav menu-->
-                <DropdownMenu />
+                <DropdownMenu :category="category" />
                 <div class="w-60 text-white font-semibold text-lg leading-none">
                     <span>Free Shipping > 50$</span>
                 </div>
@@ -110,6 +110,19 @@
         </div>
     </header>
 </template>
+
+<script>
+import { mapState } from 'vuex';
+export default {
+    computed: {
+        ...mapState({
+            category: state => {
+                return state.category.category;
+            }
+        })
+    }
+};
+</script>
 
 <style scoped>
 .nav-color {

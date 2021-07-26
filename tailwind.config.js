@@ -11,7 +11,7 @@ content: [
     'src/utils/common.js',
 ],
 },
-import: true,
+important: true,
 presets: [],
 darkMode: false, // or 'media' or 'class'
 theme: {

@@ -474,10 +474,11 @@ export default {
             }
         },
         onFileChange(event) {
-            console.log(event);
+            console.log(event.target.files.FileList);
             let files = event.target.files || event.dataTransfer.files;
+            console.log(files);
             if (!files.length) return;
-            this.files = files;
+            this.files = (files);
             this.createImage(files);
         },
         createImage(files) {
