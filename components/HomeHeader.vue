@@ -92,7 +92,7 @@
                         <span
                             class="inline-block nav-color w-5 h-5 leading-5 absolute rounded-full font-sans text-white text-xs text-center -top-2 -right-3"
                         >
-                            0
+                            {{ cart.length }}
                         </span>
                     </div>
                 </div>
@@ -118,7 +118,8 @@ export default {
         ...mapState({
             category: state => {
                 return state.category.category;
-            }
+            },
+            cart: (state) => state.cart.cart, 
         })
     }
 };

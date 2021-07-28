@@ -22,6 +22,9 @@ let store = {};
   resolveStoreModules(require('..\\store\\brand\\actions.js'), 'brand/actions.js')
   resolveStoreModules(require('..\\store\\brand\\mutations.js'), 'brand/mutations.js')
   resolveStoreModules(require('..\\store\\brand\\state.js'), 'brand/state.js')
+  resolveStoreModules(require('..\\store\\cart\\actions.js'), 'cart/actions.js')
+  resolveStoreModules(require('..\\store\\cart\\mutations.js'), 'cart/mutations.js')
+  resolveStoreModules(require('..\\store\\cart\\state.js'), 'cart/state.js')
   resolveStoreModules(require('..\\store\\category\\actions.js'), 'category/actions.js')
   resolveStoreModules(require('..\\store\\category\\mutations.js'), 'category/mutations.js')
   resolveStoreModules(require('..\\store\\category\\state.js'), 'category/state.js')
@@ -38,6 +41,9 @@ let store = {};
       '..\\store\\brand\\actions.js',
       '..\\store\\brand\\mutations.js',
       '..\\store\\brand\\state.js',
+      '..\\store\\cart\\actions.js',
+      '..\\store\\cart\\mutations.js',
+      '..\\store\\cart\\state.js',
       '..\\store\\category\\actions.js',
       '..\\store\\category\\mutations.js',
       '..\\store\\category\\state.js',

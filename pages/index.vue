@@ -4,7 +4,7 @@
         <TopBrandSlider />
         <BestDealSlider :saleProducts="saleProducts" />
         <SmallBanner />
-        <TrendingProduct />
+        <TrendingProduct :trendingProducts="trendingProducts" />
         <Blog />
     </div>
 </template>
@@ -13,7 +13,8 @@
 export default {
     data() {
         return {
-            saleProducts: ''
+            saleProducts: '',
+            trendingProducts: ''
         };
     },
     async fetch() {
@@ -22,6 +23,7 @@ export default {
     },
     created() {
         this.getSaleProduct();
+        this.getTrendingProduct();
     },
     methods: {
         async getSaleProduct() {
@@ -29,7 +31,15 @@ export default {
                 const response = await this.$services.Product.getSaleProduct();
                 this.saleProducts = response.data;
             } catch (error) {
-              throw error;
+                throw error;
+            }
+        },
+        async getTrendingProduct() {
+            try {
+                const response = await this.$services.Product.getTrendingProduct();
+                this.trendingProducts = response.data;
+            } catch (error) {
+                throw error;
             }
         }
     }

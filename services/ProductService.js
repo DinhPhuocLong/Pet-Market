@@ -10,6 +10,16 @@ export default ($axios) => ({
             }
         });
     },
+    getProductByCategory(slug) {
+        return $axios.get(`${resource}/${slug}`);
+    },
+    getTrendingProduct() {
+        return $axios.get(resource, {
+            params: {
+                trending: true
+            }
+        })
+    },
     store(payload) {
         return $axios.post(resource, payload, {
             headers: {
@@ -17,8 +27,8 @@ export default ($axios) => ({
             }
         });
     },
-    show(id) {
-        return $axios.get(`${resource}/${id}`);
+    show(slug) {
+        return $axios.get(`${resource}/${slug}`);
     },
     update(id, payload) {
         return $axios.put(`${resource}/${id}`, payload);

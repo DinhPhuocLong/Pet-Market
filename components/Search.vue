@@ -3,7 +3,7 @@
         <input
             type="text"
             class="w-full py-3.5 border border-solid border-gray-400 rounded-l-full pl-7 outline-none text-sm font-bold"
-            placeholder="Email Address"
+            placeholder="Tìm kiếm..."
             style="max-width: 700px"
         />
         <button type="submit" class="bg-black text-white px-7 rounded-r-full">

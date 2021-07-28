@@ -11,6 +11,9 @@
   "BlogSidebar": {
     "description": "Auto imported from components/BlogSidebar.vue"
   },
+  "BrandCard": {
+    "description": "Auto imported from components/BrandCard.vue"
+  },
   "Breadcrumbs": {
     "description": "Auto imported from components/Breadcrumbs.vue"
   },
@@ -31,6 +34,9 @@
   },
   "Pagination": {
     "description": "Auto imported from components/Pagination.vue"
+  },
+  "ProductCard": {
+    "description": "Auto imported from components/ProductCard.vue"
   },
   "ProductCarousel": {
     "description": "Auto imported from components/ProductCarousel.vue"

@@ -884,7 +884,9 @@ export default {
         try {
             const slug = params.slug;
             let products, brands;
-            
+            await $services.Brand.productsByBrand(slug).then(
+                response => (products = response.data)
+            );
             await $services.Brand.all({ limit: 6 }).then(
                 response => (brands = response.data.filter(item => item.path_img != ''))
             );
@@ -892,11 +894,6 @@ export default {
         } catch (error) {
             redirect('/');
         }
-    },
-    async created() {
-        await $services.Product.getProductByCategory(slug).then(
-                response => (products = response.data)
-        );
     }
 };
 </script>

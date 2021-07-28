@@ -11,13 +11,16 @@
 
 <script>
 export default {
-    async fetch() {
+    async fetch() { //server 
         try {
             await this.$store.dispatch('category/getCategory', 'product');
         } catch (error) {
             console.log(error);
         }
-    }
+    },
+    created() {
+        if(process.client) this.$store.dispatch('cart/getLocalStorageCart');
+    },
 };
 </script>
 

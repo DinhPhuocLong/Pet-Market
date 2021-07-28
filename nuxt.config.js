@@ -36,17 +36,72 @@ export default {
                 href: '/uikit-core.min.css'
             },
         ],
-        // script: [{
-        //     type: 'module',
-        //     src: 'uikit.min.js',
-        //     ssr: false
-        // }],
+        script: [{
+            type: 'module',
+            src: '/uikit.min.js',
+            ssr: false
+        }],
 
     },
 
     router: {
         extendRoutes(routes, resolve) {
+            return [{
+                    name: '404',
+                    path: '*',
+                    component: resolve(__dirname, 'pages/404.vue'),
+                    chunkName: 'pages/404.vue'
+                },
+                {
+                    name: 'home-page',
+                    path: '/',
+                    component: resolve(__dirname, 'pages/index.vue'),
+                    chunkName: 'pages/index.vue',
+                },
+                {
+                    name: 'shop-by-brand',
+                    path: '/thuong-hieu/:slug',
+                    component: resolve(__dirname, 'pages/product/brand.vue'),
+                    chunkName: 'pages/product/brand.vue',
+                },
+                {
+                    name: 'shop-by-category',
+                    path: '/danh-muc/:slug',
+                    component: resolve(__dirname, 'pages/product/index.vue'),
+                    chunkName: 'pages/product/index.vue',
+                },
+                {
+                    name: 'product-detail',
+                    path: '/san-pham/:slug',
+                    component: resolve(__dirname, 'pages/product/_slug.vue'),
+                    chunkName: 'pages/product/_slug.vue',
+                },
+                {
+                    name: 'cart',
+                    path: '/gio-hang',
+                    component: resolve(__dirname, 'pages/cart.vue'),
+                    chunkName: 'pages/cart.vue',
+                },
+                {
+                    name: 'contact',
+                    path: '/lien-he',
+                    component: resolve(__dirname, 'pages/contact.vue'),
+                    chunkName: 'pages/contact.vue',
+                },
+                {
+                    name: 'dashboard-category',
+                    path: '/dashboard/category',
+                    component: resolve(__dirname, 'pages/dashboard/category/index.vue'),
+                    chunkName: 'pages/dashboard/category/index.vue',
+                },
+                {
+                    name: 'login',
+                    path: '/login',
+                    component: resolve(__dirname, 'pages/dashboard/login.vue'),
+                    chunkName: 'pages/dashboard/login.vue',
+                }
 
+            ]
         }
     },
 

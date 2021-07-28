@@ -4,6 +4,7 @@ export { default as Banner } from '../..\\components\\Banner.vue'
 export { default as BestDealSlider } from '../..\\components\\BestDealSlider.vue'
 export { default as Blog } from '../..\\components\\Blog.vue'
 export { default as BlogSidebar } from '../..\\components\\BlogSidebar.vue'
+export { default as BrandCard } from '../..\\components\\BrandCard.vue'
 export { default as Breadcrumbs } from '../..\\components\\Breadcrumbs.vue'
 export { default as CommentForm } from '../..\\components\\CommentForm.vue'
 export { default as DropdownMenu } from '../..\\components\\DropdownMenu.vue'
@@ -11,6 +12,7 @@ export { default as Footer } from '../..\\components\\Footer.vue'
 export { default as HeaderMobile } from '../..\\components\\HeaderMobile.vue'
 export { default as HomeHeader } from '../..\\components\\HomeHeader.vue'
 export { default as Pagination } from '../..\\components\\Pagination.vue'
+export { default as ProductCard } from '../..\\components\\ProductCard.vue'
 export { default as ProductCarousel } from '../..\\components\\ProductCarousel.vue'
 export { default as ProductDetailHeader } from '../..\\components\\ProductDetailHeader.vue'
 export { default as Search } from '../..\\components\\Search.vue'
@@ -32,6 +34,7 @@ export const LazyBanner = import('../..\\components\\Banner.vue' /* webpackChunk
 export const LazyBestDealSlider = import('../..\\components\\BestDealSlider.vue' /* webpackChunkName: "components/best-deal-slider" */).then(c => wrapFunctional(c.default || c))
 export const LazyBlog = import('../..\\components\\Blog.vue' /* webpackChunkName: "components/blog" */).then(c => wrapFunctional(c.default || c))
 export const LazyBlogSidebar = import('../..\\components\\BlogSidebar.vue' /* webpackChunkName: "components/blog-sidebar" */).then(c => wrapFunctional(c.default || c))
+export const LazyBrandCard = import('../..\\components\\BrandCard.vue' /* webpackChunkName: "components/brand-card" */).then(c => wrapFunctional(c.default || c))
 export const LazyBreadcrumbs = import('../..\\components\\Breadcrumbs.vue' /* webpackChunkName: "components/breadcrumbs" */).then(c => wrapFunctional(c.default || c))
 export const LazyCommentForm = import('../..\\components\\CommentForm.vue' /* webpackChunkName: "components/comment-form" */).then(c => wrapFunctional(c.default || c))
 export const LazyDropdownMenu = import('../..\\components\\DropdownMenu.vue' /* webpackChunkName: "components/dropdown-menu" */).then(c => wrapFunctional(c.default || c))
@@ -39,6 +42,7 @@ export const LazyFooter = import('../..\\components\\Footer.vue' /* webpackChunk
 export const LazyHeaderMobile = import('../..\\components\\HeaderMobile.vue' /* webpackChunkName: "components/header-mobile" */).then(c => wrapFunctional(c.default || c))
 export const LazyHomeHeader = import('../..\\components\\HomeHeader.vue' /* webpackChunkName: "components/home-header" */).then(c => wrapFunctional(c.default || c))
 export const LazyPagination = import('../..\\components\\Pagination.vue' /* webpackChunkName: "components/pagination" */).then(c => wrapFunctional(c.default || c))
+export const LazyProductCard = import('../..\\components\\ProductCard.vue' /* webpackChunkName: "components/product-card" */).then(c => wrapFunctional(c.default || c))
 export const LazyProductCarousel = import('../..\\components\\ProductCarousel.vue' /* webpackChunkName: "components/product-carousel" */).then(c => wrapFunctional(c.default || c))
 export const LazyProductDetailHeader = import('../..\\components\\ProductDetailHeader.vue' /* webpackChunkName: "components/product-detail-header" */).then(c => wrapFunctional(c.default || c))
 export const LazySearch = import('../..\\components\\Search.vue' /* webpackChunkName: "components/search" */).then(c => wrapFunctional(c.default || c))

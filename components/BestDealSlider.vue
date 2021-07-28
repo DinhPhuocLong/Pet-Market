@@ -97,14 +97,14 @@
                                             />
                                         </svg>
                                     </button>
-                                    <button
+                                    <button @click.prevent="addToCart(saleProduct);"
                                         class="p-2 inline-block text-center w-10 h-10 leading-10 bg-white
                                             border border-solid border-gray-300 mb-2 rounded-full
                                             transform translate-x-20 transition-all duration-500
                                             hover:text-white hover:bg-red-500
                                             product-buttons opacity-0"
                                     >
-                                        <svg
+                                        <svg 
                                             xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-shopping-cart-plus"
                                             width="22"
@@ -136,7 +136,7 @@
                             <div
                                 class="block min-w-[52px] text-center bg-red-500 absolute rounded-full py-1 text-white text-xs font-bold top-2 left-2"
                             >
-                                {{ saleProduct.salePrice | percentage }}
+                                -{{ saleProduct.salePrice | percentage }}
                             </div>
                             <!-- tag -->
                             <div
@@ -198,7 +198,7 @@
                                     </svg>
                                 </button>
 
-                                <button
+                                <button 
                                     type="button"
                                     class="focus:outline-none mr-1"
                                 >
@@ -246,7 +246,15 @@
 
 <script>
 export default {
-    props: ["saleProducts"]
+    props: ["saleProducts"],
+    methods: {
+        addToCart(product) {
+            this.$store.dispatch('cart/addToCart', {
+                ...product,
+                quantity: 1
+            });
+        },
+    }
 };
 </script>
 

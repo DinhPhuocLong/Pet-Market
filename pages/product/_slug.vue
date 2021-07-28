@@ -3,8 +3,8 @@
       <div class="w-full mt-12">
         <div class="w-[94%] xl:w-11/12 max-w-[1440px] mx-auto lg:flex gap-x-8 lg:border-b border-solid border-gray-300 pb-20">
             <div class="lg:w-1/2">
-                <div class="border border-solid border-gray-300 rounded-lg overflow-hidden relative">
-                    <img class="p-2" src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2020/12/product-11.jpg"
+                <div class="border border-solid border-gray-300 rounded-lg overflow-hidden relative py-12">
+                    <img class="p-2 mx-auto" :src="product.product_images[0].largeImageUrl"
                         alt="">
                     <div class="absolute top-4 right-4 border border-solid border-gray-300 rounded-full p-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrows-diagonal"
@@ -19,22 +19,15 @@
                     </div>
                 </div>
     
-                <div class="grid grid-cols-4 gap-x-4 mt-4">
-                    <div class="border border-solid border-black rounded-lg overflow-hidden"><img
-                            src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2020/12/product-19-450x450.jpg"
-                            alt=""></div>
-                    <div class="border border-solid border-gray-300 rounded-lg overflow-hidden"><img
-                            src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2020/12/product-19-450x450.jpg"
-                            alt=""></div>
-                    <div class="border border-solid border-gray-300 rounded-lg overflow-hidden"><img
-                            src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2020/12/product-19-450x450.jpg"
-                            alt=""></div>
-                    <div class="border border-solid border-gray-300 rounded-lg overflow-hidden"><img
-                            src="https://wpbingosite.com/wordpress/petio/wp-content/uploads/2020/12/product-19-450x450.jpg"
-                            alt=""></div>
-                </div>
-    
-    
+                <!-- <div class="grid grid-cols-4 gap-x-4 mt-4">
+                    <div v-for="(image, index) in product.product_images" :key="index"
+                    class="border border-solid border-black rounded-lg overflow-hidden">
+                        <img
+                            :src="image.mediumImageUrl"
+                            :alt="image.name">
+                    </div>
+                </div> -->
+
             </div>
     
             <div class="lg:w-1/2">
@@ -60,26 +53,22 @@
                     <li class="inline text-black">this text is fucking long, so it break to under line</li>
                 </ul>
                 <h1 class="text-3xl font-semibold break-words leading-12">
-                    Lorem ipsum dolor sit amet consectetur Lorem, ipsum.
+                    {{ product.name }}
                 </h1>
     
                 <div class="flex gap-4 mt-4">
-                    <span class="line-through text-gray-400 text-lg font-semibold">100.000đ</span>
-                    <span class="text-xl font-semibold">200.000đ</span>
-                    <div class="onsale text-center">
+                    <span class="line-through text-gray-400 text-lg font-semibold" v-if="+product.salePrice">{{ product.price | toVndCurrency }}</span>
+                    <span class="text-xl font-semibold">{{ +product.salePrice ? (+product.salePrice / 100) * +product.price : product.price | toVndCurrency }}</span>
+                    <div class="onsale text-center" v-if="+product.salePrice">
                         <span class="pl-4 text-sm font-semibold">
-                            7%
+                            {{ product.salePrice | percentage }}
                         </span>
                     </div>
                 </div>
                 <div class="">
-                    <p class="text-base text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur.</p>
+                    <p class="text-base text-gray-500" v-html="product.description"></p>
         
-                    <div class="flex flex-col items-start gap-x-2 mt-10">
+                    <!-- <div class="flex flex-col items-start gap-x-2 mt-10">
                         <div class="flex gap-x-2">
                             <i class="bi bi-clock-history text-red-500 text-2xl"></i>
                             <h2 class="text-red-500 font-semibold text-[22px] relative">
@@ -119,7 +108,7 @@
                                 <span class="text-sm mt-3 font-bold">Seconds</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
         
                     <div class="border-b border-solid border-gray-300 pb-8">
                         <form class="flex flex-wrap [480]:flex-nowrap w-full mt-4 items-center gap-x-2">
@@ -238,15 +227,6 @@
 
 
         <div class="w-[94%] xl:w-11/12 max-w-[1440px] mx-auto border-b border-solid border-gray-200 mt-4 pb-10">
-            <ul class="flex flex-col items-center md:flex-row md:justify-center md:gap-x-10 mt-8">
-                <li>
-                    <a href="#" class="text-xl font-bold">Mô tả</a>
-                </li>
-                <li>
-                    <a href="#" class="text-xl font-bold">Đánh giá (0)</a>
-                </li>
-            </ul>
-
             <div id="comments" class="mt-10">
                 <h2 class="text-2xl font-bold mb-10">Đánh giá</h2>
                 <p class="text-gray-500">Hiện chưa có đánh giá nào.</p>
@@ -322,7 +302,22 @@
 
 <script>
 export default {
-    layout: 'product'
+    layout: 'product',
+    async asyncData({ redirect, params, $services }) {
+        let product;
+        try {
+            const slug = params.slug;
+            await $services.Product.show(slug).then(response => product = response.data);
+            return { product };
+        } catch (error) {
+            redirect('/404');
+        }
+    },
+    computed: {
+        calculateSalePrice() {
+            return product.price - ((product.salePrice / 100) * product.price);
+        }
+    }
 }
 </script>
 
@@ -336,7 +331,6 @@ export default {
         color: #ff4545;
         ;
     }
-
     .onsale::before {
         content: "";
         position: absolute;
@@ -349,7 +343,6 @@ export default {
         display: inline-block !important;
         z-index: -2;
     }
-
     .onsale::after {
         content: "";
         position: absolute;
